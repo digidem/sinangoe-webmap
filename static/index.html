@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Our Rainforest Is Not For Sale</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+  <link href="bundle.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face {
+      font-family: FuturaPassata;
+      src: url('/FuturaPassata-DISPLAY.eot'); /* IE9 Compat Modes */
+      src: url('/FuturaPassata-DISPLAY.woff2') format('woff2'),
+           url('/FuturaPassata-DISPLAY.woff') format('woff');
+    }
+    @media only screen and (max-width: 600px) {
+      #map {
+        display: none;
+      }
+    }
+    body, html {
+      -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+      overflow: hidden;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    body {
+      margin:0;
+      font-family: 'Nunito Sans', Helvetica, sans-serif;
+      padding:0;
+      background-image: url(/background.jpg);
+      background-size: cover;
+    }
+    @media only screen and (max-width: 600px) {
+      body {
+        background-image: none;
+      }
+    }
+    button, h1, h2, h3, h4, h5, h6 {
+      font-weight: 400;
+      font-family: FuturaPassata, Helvetica, sans-serif;
+    }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+<div id='map'></div>
+<div id='sidebar-wrapper'></div>
+<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+<script src='bundle.js'></script>
+</body>
+</html>
