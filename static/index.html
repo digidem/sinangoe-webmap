@@ -50,5 +50,16 @@
 <div id='sidebar-wrapper'></div>
 <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 <script src='bundle.js'></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function () {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
