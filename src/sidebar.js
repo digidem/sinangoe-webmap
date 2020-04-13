@@ -269,29 +269,49 @@ module.exports = function (lang, _map) {
     mobileBackground.style.opacity = 0.3
   }
 
+  function sidebar () {
+    var sections = require('./sections.json').sections
+    var allSections = sections.map((section) => {
+      var autoScroll = mapView(section.slug, html`<h1>${message(section.title)}</h1>`, onenter, onexit)
+      var contents = section.content.map((item) => {
+        switch (item.type) {
+          case 'video':
+            return video(item.url, {
+              background: item.background,
+              placeholderImg: item.placeholderImg
+            })
+          case 'text':
+            return html`<p>${message(item.text)}</p>`
+          case 'image':
+            return image(item.url)
+          default:
+            return raw(message(item.text))
+        }
+      })
+      contents.unshift(autoScroll)
+      return contents
+    })
+
+    return allSections
+  }
+
   return html`<div id="sidebar-wrapper" class=${style}>
   ${mobileBackground}
   <div id="scroll-container">
     <div id="sidebar">
-      <section>
-        ${mapView('start', html`<h1>${message('title')}</h1>`, onenter, onexit)}
-        ${video('https://vimeo.com/270209852/d857a916b5', {
-          background: true,
-          placeholderImg: '1territory.jpg'})}
-        <p>${message('start')}</p>
-      </section>
-      <section>
-        ${image('1e')}
-        <p>${message('start-2')}</p>
-      </section>
-      <section>
-        ${mapView('oil-rush', html`<h2>${message('oil-rush-title')}</h2>`, onenter, onexit)}
-        ${image('2a')}
-        <p>${message('oil-rush')}</p>
-        ${video('https://vimeo.com/270208622/ee7d7a12cc', {
-          background: true,
-          placeholderImg: '2oil.jpg'})}
-      </section>
+      ${sidebar()}
+    </div>
+  </div>
+  </div>`
+}
+
+function isMobile () {
+  if (typeof window === 'undefined') return false
+  return window.innerWidth < 601
+}
+
+/**
+ *
       <section>
         ${mapView('maps-and-resistance', html`<h2>${message('maps-and-resistance-title')}</h2>`, onenter, onexit)}
         ${image('3a')}
@@ -353,12 +373,4 @@ module.exports = function (lang, _map) {
           </p>
         </div>
       </section>
-    </div>
-  </div>
-  </div>`
-}
-
-function isMobile () {
-  if (typeof window === 'undefined') return false
-  return window.innerWidth < 601
-}
+      **/
