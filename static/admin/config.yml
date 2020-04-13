@@ -19,6 +19,7 @@ collections:
         collection: MapLayers
         valueField: name
         multiple: true
+        required: false
       - label: Bounds
         name: bounds
         widget: string
@@ -27,16 +28,16 @@ collections:
         widget: list
         allow_add: true
         fields: 
-          - {label: Image, name: image, widget: image}
+          - {label: Image, name: image, widget: image, required: false}
           - label: Video
             name: video
             widget: object
+            required: false
             fields:
               - {label: URL, name: url, widget: string}
               - {label: "Play in the background?", name: background, widget: boolean, default: true}
-              - {label: "Background?", name: background, widget: boolean, default: true}
               - {label: "Placeholder Image", name: placeholderImg, widget: string}
-          - {label: Text, name: text, widget: text}
+          - {label: Text, name: text, widget: text, required: false}
   - name: mapLayers
     label: Map Layers
     folder: _data/layers
