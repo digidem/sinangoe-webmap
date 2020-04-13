@@ -30,7 +30,7 @@ collections:
           - {label: Image, name: image, widget: image}
           - label: Video
             name: video
-            widget: object}
+            widget: object
             fields:
               - {label: URL, name: url, widget: string}
               - {label: "Play in the background?", name: background, widget: boolean, default: true}
