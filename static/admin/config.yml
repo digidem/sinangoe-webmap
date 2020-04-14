@@ -9,6 +9,7 @@ collections:
     folder: _data/sections
     create: true
     slug: "{{slug}}"
+    extension: 'json'
     fields: 
       - label: Title
         name: title
