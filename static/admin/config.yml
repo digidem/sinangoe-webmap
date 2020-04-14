@@ -2,16 +2,28 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
+local_backend: true
+
 media_folder: "static/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "uploads" 
 
 collections:
-  - label: Visible Sections
-    name: visible
-    widget: ncw-reorder
-    collection: sections 
-    id_field: id
-    display_template: '{{id}} | {{title}}'
+  - name: settings
+    label: Settings
+    delete: false
+    folder: _data/settings
+    create: true
+    fields: 
+      - label: Section Order
+        name: order
+        widget: ncw-reorder
+        collection: sections 
+        editor:
+          preview: true
+        id_field: id
+        display_template: '{{id}} | {{title}}'
+        fields:
+              - { label: "Id", name: "id", widget: "string" }
   - name: sections
     label: Map Sections
     folder: _data/sections
