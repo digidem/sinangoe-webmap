@@ -276,7 +276,7 @@ module.exports = function (lang, _map) {
   }
 
   function sidebar () {
-    var sections = require('../data.json').sections
+    var sections = require('../_data/data.json').sections
     var allSections = sections.map((section) => {
       var autoScroll = mapView(section, html`<h1>${message(section.title)}</h1>`, onenter, onexit)
       var contents = section.content.map((item) => {

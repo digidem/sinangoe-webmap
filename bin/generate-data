@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var path = require('path')
+var fs = require('fs')
+
+var sections = []
+var DATA_FILES = path.join(__dirname, '../_data/sections')
+var OUTPUT_FILE = path.join(__dirname, '..', '_data', 'data.json')
+
+fs.readdir(DATA_FILES, function (err, files) {
+  if (err) throw err
+  files.forEach((file) => {
+    if (!file.endsWith('.json')) return
+
+    var json = JSON.parse(fs.readFileSync(path.join(DATA_FILES, file)).toString())
+    sections.push(json)
+  })
+
+  fs.writeFileSync(
+    OUTPUT_FILE,
+    JSON.stringify({ sections }, null, 2)
+  )
+})
