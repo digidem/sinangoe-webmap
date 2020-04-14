@@ -13,6 +13,9 @@ collections:
     slug: "{{slug}}"
     extension: 'json'
     fields: 
+      - label: Slug
+        name: slug
+        widget: string
       - label: Title
         name: title
         widget: string
