@@ -1,8 +1,11 @@
 /* global mapboxgl */
 
 const css = require('sheetify')
-const mapViews = require('./map_views.json')
+const content = require('../_data/data.json')
 const config = require('../mapbox-config')
+
+var firstId = content.sections.length && content.sections[0].id
+if (!firstId) throw new Error('Unable to parse the first section id, or it does not exist')
 
 var logoClassname = css`
   .mapboxgl-ctrl-bottom-right {
@@ -74,7 +77,7 @@ module.exports = function () {
   var sidebar = document.getElementById('sidebar')
   var sidebarWidth = sidebar ? sidebar.clientWidth : 500
 
-  map.fitBounds(mapViews.start.bounds, {
+  map.fitBounds(content.map_views[firstId].bounds, {
     padding: {
       top: 0,
       right: 0,
