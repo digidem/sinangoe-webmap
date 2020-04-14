@@ -18,7 +18,6 @@ var b = budo(path.join(__dirname, '../src/screenshot-map.js'), {
   }
 }).on('connect', onconnect)
 
-
 async function onconnect (e) {
   // Run with webgl see https://github.com/GoogleChrome/puppeteer/issues/1260#issuecomment-348878456
   const browser = await puppeteer.launch({
@@ -36,7 +35,7 @@ async function onconnect (e) {
     deviceScaleFactor: 3
   })
   await page.goto(e.uri, {waitUntil: 'networkidle0'})
-  for (var viewId in mapViews) {
+  for (var viewId in content.map_views) {
     var outfile = path.join(outputDir, viewId + '.jpg')
     await page.evaluate((viewId) => window.mapTransition(viewId), viewId)
     await page.screenshot({

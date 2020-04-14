@@ -49,7 +49,9 @@ map.once('styledata', function () {
   map.addLayer(bing, 'territory-outline')
   map.setLayoutProperty('background', 'visibility', 'none')
   map.setPaintProperty('background', 'background-opacity', 0)
-  mapTransition('start', map)
+  var firstId = content.sections.length && content.sections[0].id
+  if (!firstId) throw new Error('Unable to parse the first section id, or it does not exist')
+  mapTransition(firstId, map)
 })
 
 window.mapTransition = (viewId) => new Promise((resolve, reject) => {
