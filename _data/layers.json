@@ -1,3 +1,9 @@
 {
-  "name": "bing-satellite"
+  "name": "bing-satellite",
+  "Layers": [
+    {
+      "opacity": "0",
+      "name": "bing-satellite"
+    }
+  ]
 }
