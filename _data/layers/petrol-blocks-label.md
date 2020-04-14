@@ -1,3 +1,3 @@
 ---
-name: petrol-blocks-label
+name: petrol-blocks-*
 ---
