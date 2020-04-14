@@ -1,0 +1,27 @@
+{
+  "title": "In defense of a forest homeland",
+  "bounds": "[-81.94, -5.79, -73.15, 2.65]",
+  "layerOpacity": [
+    "bing-satellite"
+  ],
+  "content": [
+    {
+      "type": "video",
+      "background": true,
+      "url": "https://vimeo.com/270209852/d857a916b5",
+      "placeholderImg": "/static/uploads/1territory.jpg"
+    },
+    {
+      "type": "text",
+      "text": "The Waorani people live in the upper headwaters of the Amazon river in Ecuador, one of the most biodiverse rainforests on earth. Their territory is 2.5 million acres, roughly the size of Yellowstone National Park"
+    },
+    {
+      "type": "image",
+      "image": "/static/uploads/1e.jpg"
+    },
+    {
+      "type": "text",
+      "text": "Before the oil companies, the loggers, the rubber tappers, and even before the Spanish conquistadors, the Waorani were known to the Incas and others as fierce defenders of the mountainous forests south of the mighty Napo River and north of the snaking Curaray."
+    }
+  ]
+}
