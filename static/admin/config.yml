@@ -23,7 +23,7 @@ collections:
         id_field: id
         display_template: '{{id}} | {{title}}'
         fields:
-              - { label: "Id", name: "id", widget: "string" }
+          - { label: "Id", name: "id", widget: "string" }
   - name: sections
     label: Map Sections
     folder: _data/sections
@@ -33,9 +33,6 @@ collections:
     slug: "{{slug}}"
     extension: 'json'
     fields: 
-      - label: Identifer
-        name: id 
-        widget: string
       - label: Title
         name: title
         widget: string

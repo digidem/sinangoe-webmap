@@ -3,21 +3,35 @@
 var path = require('path')
 var fs = require('fs')
 
+var map_views = {}
 var sections = []
-var DATA_FILES = path.join(__dirname, '../_data/sections')
+var SECTION_FILES = path.join(__dirname, '../_data/sections')
 var OUTPUT_FILE = path.join(__dirname, '..', '_data', 'data.json')
 
-fs.readdir(DATA_FILES, function (err, files) {
+fs.readdir(SECTION_FILES, function (err, files) {
   if (err) throw err
-  files.forEach((file) => {
-    if (!file.endsWith('.json')) return
+  files.forEach((filename) => {
+    if (!filename.endsWith('.json')) return
 
-    var json = JSON.parse(fs.readFileSync(path.join(DATA_FILES, file)).toString().replace(/\/static/g, ''))
-    sections.push(json)
+    var contents = fs.readFileSync(path.join(SECTION_FILES, filename).toString())
+
+    // replace '/static/.' urls with / for production use
+    contents = contents.replace(/\/static/g, '')
+
+    var section = JSON.parse(contents)
+
+    var id = filename.replace('.json', '')
+    section.id = id
+
+    map_views[id] = {
+      bounds: section.bounds,
+      layerOpacity: section.layerOpacity
+    }
+    sections.push(section)
   })
 
   fs.writeFileSync(
     OUTPUT_FILE,
-    JSON.stringify({ sections }, null, 2)
+    JSON.stringify({ sections, map_views }, null, 2)
   )
 })

@@ -3,6 +3,7 @@ const html = require('nanohtml')
 const raw = require('nanohtml/raw')
 const onIntersectOrig = require('on-intersect')
 var document = require('global/document')
+var content = require('../_data/data.json')
 
 var ZoomableImage = require('./image')
 var ZoomableVideo = require('./video')
@@ -26,7 +27,7 @@ var mapTransition = require('./map_transition')
 
 const IMAGE_URL = 'https://stupefied-meitner-092e19.netlify.com'
 
-function mapView (section, el, onenter, onexit) {
+function mapView (id, el, onenter, onexit) {
   var mobile = isMobile()
   // Don't consider title in map view until more than 40% from bottom
   // of the viewport
@@ -36,7 +37,7 @@ function mapView (section, el, onenter, onexit) {
     root: document.getElementById('#scroll-container'),
     rootMargin: mobile ? rootMarginMobile : rootMarginWithMap
   }, function () {
-    onenter(section)
+    onenter(id)
   }, function () {
     onexit()
   })
@@ -281,9 +282,8 @@ module.exports = function (lang, _map) {
   }
 
   function sidebar () {
-    var sections = require('../_data/data.json').sections
-    var allSections = sections.map((section) => {
-      var autoScroll = mapView(section, html`<h1>${message(section.title)}</h1>`, onenter, onexit)
+    var allSections = content.sections.map((section) => {
+      var autoScroll = mapView(section.id, html`<h1>${message(section.title)}</h1>`, onenter, onexit)
       var contents = section.content.map((item) => {
         switch (item.type) {
           case 'video':

@@ -3,6 +3,7 @@ var css = require('sheetify')
 const config = require('../mapbox-config')
 var html = require('nanohtml')
 var mapTransition = require('./map_transition')
+var content = require('../_data/data.json')
 
 css('mapbox-gl/dist/mapbox-gl.css')
 
