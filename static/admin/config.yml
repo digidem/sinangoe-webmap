@@ -71,9 +71,7 @@ collections:
               - {label: "Placeholder Image", name: placeholderImg, widget: image}
   - name: mapLayers
     label: Map Layers
-    folder: _data/layers
-    create: true
-    slug: "{{name}}"
+    file: _data/layers.json
     fields: 
       - {label: Name, name: name, widget: string}
       
