@@ -29,6 +29,7 @@
   "homepage": "https://github.com/digidem/mapa-waorani#readme",
   "dependencies": {
     "@digidem/attribution-control": "^1.0.0",
+    "@ncwidgets/reorder": "^0.7.0",
     "@vimeo/player": "^2.6.1",
     "debug": "^3.1.0",
     "global": "^4.3.2",

@@ -6,15 +6,23 @@ media_folder: "static/uploads" # Media files will be stored in the repo under im
 public_folder: "uploads" 
 
 collections:
+  - label: Visible Sections
+    name: visible
+    widget: ncw-reorder
+    collection: sections 
+    id_field: id
+    display_template: '{{id}} | {{title}}'
   - name: sections
     label: Map Sections
     folder: _data/sections
+    editor: 
+      preview: false
     create: true
     slug: "{{slug}}"
     extension: 'json'
     fields: 
-      - label: Slug
-        name: slug
+      - label: Identifer
+        name: id 
         widget: string
       - label: Title
         name: title

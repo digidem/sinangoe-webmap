@@ -244,7 +244,7 @@ module.exports = function (lang, _map) {
         opacityMap[layerId] = 1
       })
       var view = {
-        id: section.slug,
+        id: section.id,
         layerOpacity: opacityMap,
         bounds: section.bounds
       }
@@ -254,7 +254,7 @@ module.exports = function (lang, _map) {
     }
     if (!mobile) return
     var img = new Image()
-    var imageUrl = '/screenshots/' + section.slug + '.jpg'
+    var imageUrl = '/screenshots/' + section.id + '.jpg'
     img.onload = function () {
       if (mobileBackground.style.backgroundImage.indexOf(imageUrl) > -1) {
         mobileBackground.style.opacity = 1
