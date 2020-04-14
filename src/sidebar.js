@@ -238,9 +238,14 @@ module.exports = function (lang, _map) {
     var mobile = isMobile()
     var sidebarWidth = document.getElementById('sidebar').clientWidth || 500
     if (map) {
+      // TODO: put custom opacity layers in CMS
+      var opacityMap = {}
+      section.layerOpacity.map((layerId) => {
+        opacityMap[layerId] = 1
+      })
       var view = {
         id: section.slug,
-        layerOpacity: section.layerOpacity,
+        layerOpacity: opacityMap,
         bounds: section.bounds
       }
       mapTransition(view, map, {
