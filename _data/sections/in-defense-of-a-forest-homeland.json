@@ -11,5 +11,8 @@
     }
   ],
   "title": "in defense of a forest homeland",
-  "bounds": "[0,2,3,1]"
+  "bounds": "[0,2,3,1]",
+  "layerOpacity": [
+    "bing-satellite"
+  ]
 }
