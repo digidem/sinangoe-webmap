@@ -1,0 +1,10 @@
+{
+  "Layers": [
+    {
+      "id": "bing-satellite"
+    },
+    {
+      "id": "petrol-blocks-*"
+    }
+  ]
+}
