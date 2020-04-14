@@ -11,10 +11,21 @@ collections:
   - name: settings
     label: Settings
     delete: false
-    folder: _data/settings
-    create: true
-    fields: 
+    files:
+      - name: mapLayers
+        label: Map Layers
+        file: _data/layers.json
+        fields: 
+          - label: layers
+            name: Layers
+            widget: list
+            fields:
+              - {label: Layer id, name: id, widget: string}
+              # unsure if this is needed:
+              # - {label: Default Opacity, name: opacity, widget: string, default: '0', pattern: ['^(?:0*(?:\.\d+)?|1(\.0*)?)$', 'Must be a number betwen 0 and 1']}
+      
       - label: Section Order
+        file: _data/order.json
         name: order
         widget: ncw-reorder
         collection: sections 
@@ -69,9 +80,3 @@ collections:
               - {label: URL, name: url, widget: string}
               - {label: "Play in the background?", name: background, widget: boolean, default: true}
               - {label: "Placeholder Image", name: placeholderImg, widget: image}
-  - name: mapLayers
-    label: Map Layers
-    file: _data/layers.json
-    fields: 
-      - {label: Name, name: name, widget: string}
-      
