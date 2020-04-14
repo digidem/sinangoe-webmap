@@ -24,7 +24,7 @@ var translations = {
 
 var mapTransition = require('./map_transition')
 
-const IMAGE_URL = 'https://stupefied-meitner-092e19.netlify.com/'
+const IMAGE_URL = 'https://stupefied-meitner-092e19.netlify.com'
 
 function mapView (section, el, onenter, onexit) {
   var mobile = isMobile()
