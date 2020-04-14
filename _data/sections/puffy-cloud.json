@@ -5,9 +5,10 @@
       "image": "/static/uploads/puffycloud.jpg"
     }
   ],
-  "title": "Puffy cloud",
+  "title": "A pufffuffy cloud",
   "layerOpacity": [
     "petrol-blocks-label"
   ],
-  "bounds": "[-78.3155, -3.3493, -74.9871, 0.6275]"
+  "bounds": "[-78.3155, -3.3493, -74.9871, 0.6275]",
+  "id": "puff"
 }
