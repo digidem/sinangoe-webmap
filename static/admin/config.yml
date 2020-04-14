@@ -19,7 +19,7 @@ collections:
         widget: relation
         collection: mapLayers
         valueField: name
-        displayField: name
+        searchFields: [name]
         multiple: true
         required: false
       - label: Bounds
@@ -29,17 +29,24 @@ collections:
         name: content
         widget: list
         allow_add: true
-        fields: 
-          - {label: Image, name: image, widget: image, required: false}
+        types: 
+          - label: Image
+            name: image 
+            widget: object
+            fields:
+              - {label: Image, name: image, widget: image}
+          - label: Text
+            name: text 
+            widget: text
+            fields:
+              - {label: Text, name: text, widget: text}
           - label: Video
             name: video
             widget: object
-            required: false
             fields:
               - {label: URL, name: url, widget: string}
               - {label: "Play in the background?", name: background, widget: boolean, default: true}
-              - {label: "Placeholder Image", name: placeholderImg, widget: string}
-          - {label: Text, name: text, widget: text, required: false}
+              - {label: "Placeholder Image", name: placeholderImg, widget: image}
   - name: mapLayers
     label: Map Layers
     folder: _data/layers
