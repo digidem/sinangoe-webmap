@@ -16,8 +16,9 @@ collections:
       - label: Visible Map Layers
         name: layerOpacity
         widget: relation
-        collection: MapLayers
+        collection: mapLayers
         valueField: name
+        displayField: name
         multiple: true
         required: false
       - label: Bounds
