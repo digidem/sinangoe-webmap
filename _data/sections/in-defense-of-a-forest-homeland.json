@@ -1,0 +1,16 @@
+{
+  "content": [
+    {
+      "video": {
+        "background": true,
+        "url": "https://avimeourl.com",
+        "placeholderImg": "territory.jpg"
+      },
+      "image": "/static/uploads/2a.jpg",
+      "text": "Some text"
+    }
+  ],
+  "contentexperiment": "Some information here\n\n![wpw information](/static/uploads/2a.jpg \"Cool\")",
+  "title": "in defense of a forest homeland",
+  "bounds": "[0,2,3,1]"
+}
