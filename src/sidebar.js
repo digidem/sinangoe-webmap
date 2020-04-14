@@ -231,8 +231,8 @@ module.exports = function (lang, _map) {
 
   function message (key) {
     return key
-    var msg = translations[lang][key]
-    return msg ? msg.message : translations['en'][key].message
+    // var msg = translations[lang][key]
+    // return msg ? msg.message : translations['en'][key].message
   }
   function onenter (section) {
     entered = true

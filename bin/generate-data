@@ -5,33 +5,50 @@ var fs = require('fs')
 
 var map_views = {}
 var sections = []
+var LAYERS_FILES = path.join(__dirname, '../_data/layers')
 var SECTION_FILES = path.join(__dirname, '../_data/sections')
 var OUTPUT_FILE = path.join(__dirname, '..', '_data', 'data.json')
-
-fs.readdir(SECTION_FILES, function (err, files) {
+fs.readdir(LAYERS_FILES, function (err, files) {
   if (err) throw err
-  files.forEach((filename) => {
-    if (!filename.endsWith('.json')) return
+  var allLayers = files.map((file) => file.replace('.md', ''))
 
-    var contents = fs.readFileSync(path.join(SECTION_FILES, filename).toString())
+  fs.readdir(SECTION_FILES, function (err, files) {
+    if (err) throw err
+    files.forEach((filename) => {
+      if (!filename.endsWith('.json')) return
 
-    // replace '/static/.' urls with / for production use
-    contents = contents.replace(/\/static/g, '')
+      var contents = fs.readFileSync(path.join(SECTION_FILES, filename)).toString()
 
-    var section = JSON.parse(contents)
+      // replace '/static/.' urls with / for production use
+      contents = contents.replace(/\/static/g, '')
 
-    var id = filename.replace('.json', '')
-    section.id = id
+      var section = JSON.parse(contents)
 
-    map_views[id] = {
-      bounds: section.bounds,
-      layerOpacity: section.layerOpacity
-    }
-    sections.push(section)
+      var id = filename.replace('.json', '')
+      section.id = id
+
+      // initialize all layers to 0 at first
+      var layers = {}
+      allLayers.forEach((layer) => {
+        layers[layer] = 0
+      })
+
+      // for those identified in cms, make opacity 1
+      // TODO: allow custom opacity instead of binary
+      section.layerOpacity.map((layer) => {
+        layers[layer] = 1
+      })
+
+      map_views[id] = {
+        bounds: JSON.parse(section.bounds),
+        layerOpacity: layers
+      }
+      sections.push(section)
+    })
+
+    fs.writeFileSync(
+      OUTPUT_FILE,
+      JSON.stringify({ sections, map_views }, null, 2)
+    )
   })
-
-  fs.writeFileSync(
-    OUTPUT_FILE,
-    JSON.stringify({ sections, map_views }, null, 2)
-  )
 })
