@@ -16,7 +16,6 @@ function mm (list, patterns) {
 }
 
 var views = require('./map_views.json')
-
 var FADEIN_DURATION = 1000
 var FADEOUT_DURATION = 250
 var FLY_SPEED = 0.5
@@ -41,11 +40,10 @@ var events = new EventEmitter()
 
 module.exports = mapTransition
 
-function mapTransition (viewId, map, fitBoundsOptions) {
+function mapTransition (view, map, fitBoundsOptions) {
   fitBoundsOptions = Object.assign({}, {speed: FLY_SPEED}, fitBoundsOptions)
-  var view = views[viewId]
-  debug('Transition view:', viewId)
-  if (!view) return console.warn('undefined view', viewId)
+  if (!view) return console.warn('undefined view', view)
+  var viewId = view.id
 
   // It's a little tricky to cancel other transition events, because each
   // call to mapTransition() creates a new instance of the functions that we
@@ -120,7 +118,7 @@ function mapTransition (viewId, map, fitBoundsOptions) {
   function fadeinLayers () {
     // Fadein layers in target view
     Object.keys(view.layerOpacity).forEach(function (layerId) {
-      debug(viewId + ': fadein', layerId)
+      debug('fadein', layerId)
       setLayerOpacity(map, layerId, view.layerOpacity[layerId], FADEIN_DURATION)
     })
   }
@@ -149,7 +147,7 @@ function mapTransition (viewId, map, fitBoundsOptions) {
   // before the map loads.
   function retry () {
     loaded = true
-    mapTransition(viewId, map)
+    mapTransition(view, map)
   }
 }
 
@@ -173,6 +171,7 @@ function expandLayerGlobs (map) {
   // is added to the map
   mapLayers.push('bing-satellite')
   hiddenLayersExpanded = mm(mapLayers, HIDDEN_TRANSITION_LAYERS)
+  // TODO: What does this do?
   Object.keys(views).forEach(function (key) {
     var expandedLayerOpacity = {}
     var layerMatchPatterns = Object.keys(views[key].layerOpacity)

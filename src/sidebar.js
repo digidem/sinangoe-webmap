@@ -24,9 +24,9 @@ var translations = {
 
 var mapTransition = require('./map_transition')
 
-const IMAGE_URL = 'https://images.digital-democracy.org/waorani-images/'
+const IMAGE_URL = 'https://stupefied-meitner-092e19.netlify.com/'
 
-function mapView (id, el, onenter, onexit) {
+function mapView (section, el, onenter, onexit) {
   var mobile = isMobile()
   // Don't consider title in map view until more than 40% from bottom
   // of the viewport
@@ -36,9 +36,9 @@ function mapView (id, el, onenter, onexit) {
     root: document.getElementById('#scroll-container'),
     rootMargin: mobile ? rootMarginMobile : rootMarginWithMap
   }, function () {
-    onenter(id)
+    onenter(section)
   }, function () {
-    onexit(id)
+    onexit()
   })
   return el
 }
@@ -52,7 +52,7 @@ function video (url, opts) {
 }
 
 function image (path) {
-  return ZoomableImage().render(IMAGE_URL + path + '.jpg')
+  return ZoomableImage().render(IMAGE_URL + path)
 }
 
 var style = css`
@@ -229,21 +229,27 @@ module.exports = function (lang, _map) {
   var entered = true
 
   function message (key) {
+    return key
     var msg = translations[lang][key]
     return msg ? msg.message : translations['en'][key].message
   }
-  function onenter (id) {
+  function onenter (section) {
     entered = true
     var mobile = isMobile()
     var sidebarWidth = document.getElementById('sidebar').clientWidth || 500
     if (map) {
-      mapTransition(id, map, {
+      var view = {
+        id: section.slug,
+        layerOpacity: section.layerOpacity,
+        bounds: section.bounds
+      }
+      mapTransition(view, map, {
         padding: {top: 0, left: sidebarWidth, right: 0, bottom: 0}
       })
     }
     if (!mobile) return
     var img = new Image()
-    var imageUrl = '/screenshots/' + id + '.jpg'
+    var imageUrl = '/screenshots/' + section.slug + '.jpg'
     img.onload = function () {
       if (mobileBackground.style.backgroundImage.indexOf(imageUrl) > -1) {
         mobileBackground.style.opacity = 1
@@ -262,7 +268,7 @@ module.exports = function (lang, _map) {
     img.src = imageUrl
   }
 
-  function onexit (id) {
+  function onexit () {
     entered = false
     var mobile = isMobile()
     if (!mobile) return
@@ -270,9 +276,9 @@ module.exports = function (lang, _map) {
   }
 
   function sidebar () {
-    var sections = require('./sections.json').sections
+    var sections = require('../data.json').sections
     var allSections = sections.map((section) => {
-      var autoScroll = mapView(section.slug, html`<h1>${message(section.title)}</h1>`, onenter, onexit)
+      var autoScroll = mapView(section, html`<h1>${message(section.title)}</h1>`, onenter, onexit)
       var contents = section.content.map((item) => {
         switch (item.type) {
           case 'video':
@@ -283,7 +289,7 @@ module.exports = function (lang, _map) {
           case 'text':
             return html`<p>${message(item.text)}</p>`
           case 'image':
-            return image(item.url)
+            return image(item.image)
           default:
             return raw(message(item.text))
         }
