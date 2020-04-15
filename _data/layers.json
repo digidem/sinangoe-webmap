@@ -3,7 +3,11 @@
   "Layers": [
     {
       "opacity": "1",
-      "name": "bing-satellite"
+      "name": "bing-satellite",
+      "id": "petrol-blocks-*"
+    },
+    {
+      "id": "bing-satellite"
     }
   ]
 }
