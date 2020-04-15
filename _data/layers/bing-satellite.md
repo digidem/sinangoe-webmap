@@ -1,3 +1,0 @@
----
-name: bing-satellite
----

@@ -14,7 +14,7 @@ collections:
     files:
       - name: mapLayers
         label: Map Layers
-        file: _data/layers.json
+        file: _data/settings/layers.json
         fields: 
           - label: layers
             name: Layers
@@ -25,7 +25,7 @@ collections:
               # - {label: Default Opacity, name: opacity, widget: string, default: '0', pattern: ['^(?:0*(?:\.\d+)?|1(\.0*)?)$', 'Must be a number betwen 0 and 1']}
       
       - label: Section Order
-        file: _data/order.json
+        file: _data/settings/order.json
         name: order
         widget: ncw-reorder
         collection: sections 
@@ -50,9 +50,10 @@ collections:
       - label: Visible Map Layers
         name: layerOpacity
         widget: relation
-        collection: mapLayers
-        valueField: name
-        searchFields: [name]
+        collection: settings
+        displayField: mapLayers.layers.id
+        valueField: mapLayers.layers.id
+        searchFields: [mapLayers.layers.id]
         multiple: true
         required: false
       - label: Bounds
