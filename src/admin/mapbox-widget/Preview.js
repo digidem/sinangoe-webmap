@@ -1,4 +1,4 @@
-import ReactMapboxGl, { ScaleControl }  from 'react-mapbox-gl'
+import ReactMapboxGl, { ScaleControl } from 'react-mapbox-gl'
 import * as React from 'react'
 
 export default class Preview extends React.Component {

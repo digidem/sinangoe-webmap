@@ -28,7 +28,7 @@ class Control extends React.Component {
     } = this.props;
 
     return (
-      <>
+      <div>
         <input
           type="text"
           id={forID}
@@ -45,7 +45,7 @@ class Control extends React.Component {
           value={value || ''}
           onChange={e => this.handleChange({style: e.target.value})}
         />
-      <>
+      <div>
     );
   }
 }

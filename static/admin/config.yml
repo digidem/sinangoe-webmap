@@ -16,10 +16,10 @@ collections:
         label: Mapbox Settings
         file: _data/settings/mapbox.json
         fields: 
-          - label: mapbox
-            name: mapbox 
-            widget: mapbox
-          - label: layers
+      #    - label: mapbox
+      #      name: mapbox 
+      #      widget: mapbox
+          - label: Layers
             name: Layers
             widget: list
             fields:
@@ -54,13 +54,12 @@ collections:
         widget: string
       - label: Visible Map Layers
         name: layerOpacity
-        widget: relation
+        widget: ncw-file-relation
         collection: settings
-        displayField: mapLayers.layers.id
-        valueField: mapLayers.layers.id
-        searchFields: [mapLayers.layers.id]
+        file: layers
+        id_field:  id
+        display_fields: id
         multiple: true
-        required: false
       - label: Bounds
         name: bounds
         widget: string
