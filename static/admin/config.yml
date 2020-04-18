@@ -13,7 +13,7 @@ collections:
     delete: false
     files:
       - name: mapLayers
-        label: Map Layers
+        label: Map 
         file: _data/settings/layers.json
         fields: 
           - label: layers
@@ -24,17 +24,13 @@ collections:
               # unsure if this is needed:
               # - {label: Default Opacity, name: opacity, widget: string, default: '0', pattern: ['^(?:0*(?:\.\d+)?|1(\.0*)?)$', 'Must be a number betwen 0 and 1']}
       
-      - label: Section Order
-        file: _data/settings/order.json
-        name: order
-        widget: ncw-reorder
-        collection: sections 
-        editor:
-          preview: true
-        id_field: id
-        display_template: '{{id}} | {{title}}'
-        fields:
-          - { label: "Id", name: "id", widget: "string" }
+          - label: Section Order
+            name: order
+            widget: ncw-reorder
+            collection: sections 
+            id_field: id 
+            display_template: '{{id}} | {{title}}'
+
   - name: sections
     label: Map Sections
     folder: _data/sections
@@ -44,6 +40,9 @@ collections:
     slug: "{{slug}}"
     extension: 'json'
     fields: 
+      - label: id
+        name: id
+        widget: string
       - label: Title
         name: title
         widget: string
