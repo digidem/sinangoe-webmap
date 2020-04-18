@@ -1,52 +1,51 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from 'prop-types'
+import { fromJS } from 'immutable'
+import React from 'react'
 
 var propTypes = {
   onChange: PropTypes.func.isRequired,
   forID: PropTypes.string,
   value: PropTypes.node,
-  classNameWrapper: PropTypes.string.isRequired,
+  classNameWrapper: PropTypes.string.isRequired
 }
 
 var defaultProps = {
-  value: '',
+  value: ''
 }
 
 class Control extends React.Component {
-
-  handleChange (content) {
-    const { onChange } = this.props
-    onChange(content)
+  handleChange (obj) {
+    this.props.onChange(fromJS(obj))
   }
 
-  render() {
+  render () {
     const {
       forID,
       value,
-      onChange,
-      classNameWrapper,
-    } = this.props;
+      classNameWrapper
+    } = this.props
 
+    var values = value.toJS()
     return (
       <div>
         <input
-          type="text"
+          type='text'
           id={forID}
-          placeholder="Access Token"
+          placeholder='Access Token'
           className={classNameWrapper}
-          value={value || ''}
-          onChange={e => this.handleChange({accessToken: e.target.value})}
+          value={values.accessToken}
+          onChange={e => this.handleChange({ accessToken: e.target.value })}
         />
         <input
-          type="text"
+          type='text'
           id={forID}
-          placeholder="Style"
+          placeholder='Style'
           className={classNameWrapper}
-          value={value || ''}
-          onChange={e => this.handleChange({style: e.target.value})}
+          value={values.style}
+          onChange={e => this.handleChange({ style: e.target.value })}
         />
       </div>
-    );
+    )
   }
 }
 
