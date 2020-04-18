@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import mapboxgl from 'mapbox-gl'
 
 var propTypes = {
   onChange: PropTypes.func.isRequired,
@@ -11,8 +12,12 @@ var propTypes = {
 var defaultProps = {
   value: ''
 }
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWxpeWEiLCJhIjoiY2lzZDVhbjM2MDAwcTJ1cGY4YTN6YmY4cSJ9.NxK9jMmYZsA32ol_IZGs5g'
 
 class Control extends React.Component {
+  componentWillMount () {
+  }
+
   render () {
     const {
       forID,

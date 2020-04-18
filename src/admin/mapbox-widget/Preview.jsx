@@ -24,6 +24,7 @@ export default function Preview ({ value }) {
         width: '100vw'
       }}>
       <ScaleControl position={'top-right'} />
+
     </Map>
   )
 }
