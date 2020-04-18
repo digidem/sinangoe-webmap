@@ -6,5 +6,9 @@
     {
       "id": "petrol-blocks-*"
     }
+  ],
+  "order": [
+    "start",
+    "puff"
   ]
 }
