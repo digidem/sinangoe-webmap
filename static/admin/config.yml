@@ -19,8 +19,8 @@ collections:
       #    - label: mapbox
       #      name: mapbox 
       #      widget: mapbox
-          - label: Layers
-            name: Layers
+          - name: layers
+            label: Layers
             widget: list
             fields:
               - {label: Layer id, name: id, widget: string}
@@ -56,7 +56,8 @@ collections:
         name: layerOpacity
         widget: ncw-file-relation
         collection: settings
-        file: layers
+        file: mapbox 
+        target_field: layers
         id_field:  id
         display_fields: id
         multiple: true
