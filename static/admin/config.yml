@@ -12,10 +12,13 @@ collections:
     label: Settings
     delete: false
     files:
-      - name: mapLayers
-        label: Map 
-        file: _data/settings/layers.json
+      - name: mapbox
+        label: Mapbox Settings
+        file: _data/settings/mapbox.json
         fields: 
+          - label: mapbox
+            name: mapbox 
+            widget: mapbox
           - label: layers
             name: Layers
             widget: list
@@ -23,7 +26,10 @@ collections:
               - {label: Layer id, name: id, widget: string}
               # unsure if this is needed:
               # - {label: Default Opacity, name: opacity, widget: string, default: '0', pattern: ['^(?:0*(?:\.\d+)?|1(\.0*)?)$', 'Must be a number betwen 0 and 1']}
-      
+      - name: sections 
+        label: Section Order
+        file: _data/settings/order.json
+        fields:
           - label: Section Order
             name: order
             widget: ncw-reorder

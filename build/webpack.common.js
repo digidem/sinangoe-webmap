@@ -18,10 +18,22 @@ module.exports = {
         loader: 'file-loader?name=/[hash].[ext]'
       },
       {
-        loader: 'babel-loader',
-        test: /\.js?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        query: {cacheDirectory: true}
+        use: {
+          loader: 'babel-loader',
+          options: {
+            sourceType: 'module',
+            presets: [
+              ['@babel/preset-env', { targets: { esmodules: true } }],
+              '@babel/preset-react'
+            ],
+            plugins: [
+              '@babel/plugin-syntax-object-rest-spread',
+              '@babel/plugin-proposal-class-properties'
+            ]
+          }
+        }
       },
       {
         test: /\.(sa|sc|c)ss$/,
