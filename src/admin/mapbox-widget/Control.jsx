@@ -23,26 +23,32 @@ export const createControl = ({
   renderPreview,
   previewRef
 }) => {
-  function Control ({ forID, value, onChange, classNameWrapper }) {
-    const [ styleURL, setStyle ] = useState(value.styleURL)
-    const [ layers, setLayers ] = useState(value.layers)
+  class Control extends React.Component {
+    render () {
+      return <InnerControl {...this.props} />
+    }
+  }
+  function InnerControl ({ forID, value, onChange, classNameWrapper }) {
+    const data = value.toJS()
+    const [ styleURL, setStyle ] = useState(data.styleURL)
+    const [ layers, setLayers ] = useState(data.layers)
 
     function _onStyleLoad (map) {
       const _style = map.getStyle()
-      if (!_style) onChange({ styleURL, layers: [] })
-      if (_style.layers) {
-        var val = { styleURL, layers: _style.layers }
-        onChange(val)
-        setLayers(_style.layers)
-        console.log('onChange', val)
-      }
+      let val
+      if (!_style) val = { styleURL, layers: [] }
+      if (_style.layers) val = { styleURL, layers: _style.layers }
+
+      onChange(fromJS(val))
+      setLayers(val.layers)
     }
     
     const noValue = (typeof value === 'undefined' || value.styleURL === '')
     console.log('novalue', noValue)
 
     const onStyleLoad = useCallback(_onStyleLoad, [styleURL]) 
-    console.log('RENDERING', styleURL)
+    console.log('RENDERING', value.toJS())
+
 
     return (
       <div>

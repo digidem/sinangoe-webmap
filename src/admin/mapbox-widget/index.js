@@ -2,6 +2,7 @@ import * as React from 'react'
 import { renderDefaultControl, createControl } from './Control'
 import { renderDefaultPreview, createPreview } from './Preview'
 
+
 const createWidget = ({ 
   renderControl = renderDefaultControl,
   renderPreview = renderDefaultPreview,
