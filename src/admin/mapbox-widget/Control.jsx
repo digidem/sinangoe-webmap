@@ -1,15 +1,8 @@
-import PropTypes from 'prop-types'
+import { createPortal } from 'react-dom'
 import ReactMapboxGl from 'react-mapbox-gl'
 import React, { useCallback, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import { fromJS } from 'immutable'
-
-var propTypes = {
-  onChange: PropTypes.func.isRequired,
-  forID: PropTypes.string,
-  value: PropTypes.any,
-  classNameWrapper: PropTypes.string.isRequired
-}
 
 var defaultProps = {
   value: {
@@ -17,42 +10,65 @@ var defaultProps = {
     layers: []
   }
 }
-mapboxgl.accessToken = 'pk.eyJ1IjoiYWxpeWEiLCJhIjoiY2lzZDVhbjM2MDAwcTJ1cGY4YTN6YmY4cSJ9.NxK9jMmYZsA32ol_IZGs5g'
 
-function Control ({ forID, value, onChange, classNameWrapper }) {
-  const [ styleURL, setStyle ] = useState(value.style)
-
-  function _onStyleLoad (map) {
-    const _style = map.getStyle()
-    if (!_style) onChange(fromJS({ style: styleURL, layers: [] }))
-    if (_style.layers) {
-      var val = fromJS({ style: styleURL, layers: _style.layers })
-      onChange(val)
-      console.log('onChange', val)
-    }
-  }
-
-  const onStyleLoad = useCallback(_onStyleLoad, [styleURL])   
-
-  return (
-    <div>
-      <input
-        type='text'
-        id={forID}
-        placeholder='StyleURL'
-        className={classNameWrapper}
-        value={styleURL || ''}
-        onChange={e => setStyle(e.target.value)}
-      />
-      {styleURL && <MapPreview style={styleURL} onStyleLoad={onStyleLoad} />}
-    </div>
-  )
+export const renderDefaultControl = ({ value, field }) => {
+  return '<div> hi</div>'
 }
 
-Control.defaultProps = defaultProps
-Control.propTypes = propTypes
+export const PreviewPortal = ({portalRef, children}) => 
+  portalRef && portalRef.current && createPortal(children, portalRef.current)
 
-export default Control
+export const createControl = ({
+  renderControl,
+  renderPreview,
+  previewRef
+}) => {
+  function Control ({ forID, value, onChange, classNameWrapper }) {
+    const [ styleURL, setStyle ] = useState(value.styleURL)
+    const [ layers, setLayers ] = useState(value.layers)
+
+    function _onStyleLoad (map) {
+      const _style = map.getStyle()
+      if (!_style) onChange({ styleURL, layers: [] })
+      if (_style.layers) {
+        var val = { styleURL, layers: _style.layers }
+        onChange(val)
+        setLayers(_style.layers)
+        console.log('onChange', val)
+      }
+    }
+    
+    const noValue = (typeof value === 'undefined' || value.styleURL === '')
+    console.log('novalue', noValue)
+
+    const onStyleLoad = useCallback(_onStyleLoad, [styleURL]) 
+    console.log('RENDERING', styleURL)
+
+    return (
+      <div>
+        <input
+          type='text'
+          id={forID}
+          placeholder='StyleURL'
+          className={classNameWrapper}
+          value={styleURL || ''}
+          onChange={e => setStyle(e.target.value)}
+        />
+        {styleURL && <MapPreview style={styleURL} onStyleLoad={onStyleLoad} />}
+        
+        { /* Renders preview in splitpane via this component... */ }
+        <PreviewPortal portalRef={previewRef}>
+          {!noValue && renderPreview({value}) }
+        </PreviewPortal>
+      </div>
+    )
+  }
+
+  Control.defaultProps = defaultProps
+  return Control
+}
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWxpeWEiLCJhIjoiY2lzZDVhbjM2MDAwcTJ1cGY4YTN6YmY4cSJ9.NxK9jMmYZsA32ol_IZGs5g'
 
 const MapPreview = React.memo(function ({ style, onStyleLoad }) {
   // Netlify-CMS Preview elements are rendered in an iframe

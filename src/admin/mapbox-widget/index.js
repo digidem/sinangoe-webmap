@@ -1,18 +1,20 @@
-import Control from './Control'
-import Preview from './Preview'
+import * as React from 'react'
+import { renderDefaultControl, createControl } from './Control'
+import { renderDefaultPreview, createPreview } from './Preview'
 
-if (typeof window !== 'undefined') {
-  window.Control = Control
-  window.Preview = Preview
-}
-const Widget = {
-  name: 'mapbox',
-  controlComponent: Control,
-  previewComponent: Preview
+const createWidget = ({ 
+  renderControl = renderDefaultControl,
+  renderPreview = renderDefaultPreview,
+  name = 'mapbox'
+}) => {
+  const previewRef = React.createRef()
+  return {
+    name,
+    controlComponent: createControl({ renderControl, renderPreview, previewRef }),
+    previewComponent: createPreview(previewRef)
+  }
 }
 
-export {
-  Widget,
-  Control,
-  Preview
-}
+const Widget = createWidget({})
+
+export { createWidget, Widget }
