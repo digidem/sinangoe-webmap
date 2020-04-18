@@ -19,13 +19,6 @@ collections:
           - label: mapbox
             name: mapbox 
             widget: mapbox
-          - name: layers
-            label: Layers
-            widget: list
-            fields:
-              - {label: Layer id, name: id, widget: string}
-              # unsure if this is needed:
-              # - {label: Default Opacity, name: opacity, widget: string, default: '0', pattern: ['^(?:0*(?:\.\d+)?|1(\.0*)?)$', 'Must be a number betwen 0 and 1']}
       - name: sections 
         label: Section Order
         file: _data/settings/order.json
