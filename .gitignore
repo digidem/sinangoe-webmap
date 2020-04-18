@@ -1,3 +1,4 @@
 node_modules
 _data/data.json
 dist
+static/admin/cms.js
