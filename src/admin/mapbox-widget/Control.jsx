@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import { fromJS } from 'immutable'
 import React from 'react'
 
 var propTypes = {
@@ -14,35 +13,23 @@ var defaultProps = {
 }
 
 class Control extends React.Component {
-  handleChange (obj) {
-    this.props.onChange(fromJS(obj))
-  }
-
   render () {
     const {
       forID,
       value,
+      onChange,
       classNameWrapper
     } = this.props
 
-    var values = value.toJS()
     return (
       <div>
         <input
           type='text'
           id={forID}
-          placeholder='Access Token'
+          placeholder='StyleURL'
           className={classNameWrapper}
-          value={values.accessToken}
-          onChange={e => this.handleChange({ accessToken: e.target.value })}
-        />
-        <input
-          type='text'
-          id={forID}
-          placeholder='Style'
-          className={classNameWrapper}
-          value={values.style}
-          onChange={e => this.handleChange({ style: e.target.value })}
+          value={value || ''}
+          onChange={e => onChange(e.target.value)}
         />
       </div>
     )

@@ -1,23 +1,14 @@
 import PropTypes from 'prop-types'
 import ReactMapboxGl, { ScaleControl } from 'react-mapbox-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
 import * as React from 'react'
 
 export default function Preview ({ value }) {
-  console.log(arguments)
-  if (!value) return <div>Requires access token and style url</div>
-  var { accessToken, style } = value.toJS()
-  if (!accessToken || !style) {
-    return <div>Requires access token and style url</div>
-  }
+  if (!value) return <div>Requires style url</div>
   var defaultCenter = [ -79.656232, -0.489971 ]
 
   const Map = ReactMapboxGl({
-    accessToken: accessToken,
-    interactive: false,
-    attributionControl: false,
-    scrollZoom: false,
-    zoomControl: false,
-    boxZoom: false,
+    accessToken: 'pk.eyJ1IjoiYWxpeWEiLCJhIjoiY2lzZDVhbjM2MDAwcTJ1cGY4YTN6YmY4cSJ9.NxK9jMmYZsA32ol_IZGs5g',
     hash: false,
     doubleClickZoom: false,
     logoPosition: 'bottom-right'
@@ -27,7 +18,7 @@ export default function Preview ({ value }) {
     <Map
       center={defaultCenter}
       zoom={[6]}
-      style={style}
+      style={value}
       containerStyle={{
         height: '100vh',
         width: '100vw'
