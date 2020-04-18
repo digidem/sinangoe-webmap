@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "standard",
-    "build": "webpack --config webpack.dev.js",
+    "build": "mkdirp dist && npm run build:data && npm run build:screenshots && npm run build:js && npm run build:static && npm run build:sw",
     "build:data": "./bin/generate-data",
     "build:screenshots": "./bin/generate-screenshots",
     "build:sw": "workbox injectManifest && bin/inject-cache-warmer",
@@ -14,7 +14,7 @@
     "build:map": "NODE_ENV=production browserify --debug -t [ sheetify/transform -u sheetify-nested ] -p [ css-extract -o dist/bundle.css ] -g unassertify -g envify -t yo-yoify -t es2020 -g uglifyify -p common-shakeify -p browser-pack-flat/plugin src/index.js | uglifyjs --source-map 'content=inline' -c comparisons=false -m -o dist/bundle.js",
     "build:static": "copyup 'static/**/*' dist && bin/ssr",
     "start:map": "budo src/index.js:bundle.js -d static -- -t [ sheetify/transform -u sheetify-nested]",
-    "start:admin": "webpack-dev-server --config build/webpack.dev.js --hot",
+    "start:admin": "webpack-dev-server --config build/webpack.dev.js",
     "deploy": "npm run build && gh-pages -d dist" 
   },
   "repository": {

@@ -18,6 +18,7 @@ module.exports = merge(common, {
     contentBase: path.join(process.cwd(), './static/admin'),
     watchContentBase: true,
     quiet: false,
+    lazy: true,
     open: true,
     historyApiFallback: {
       rewrites: [{from: /./, to: '404.html'}]
