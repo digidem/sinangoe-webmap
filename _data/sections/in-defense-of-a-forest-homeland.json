@@ -2,7 +2,14 @@
   "title": "In defense of a forest homeland!",
   "bounds": "[-81.94, -5.79, -73.15, 2.65]",
   "layerOpacity": [
-    "bing-satellite"
+    {
+      "value": "bing-satellite",
+      "label": "bing-satellite"
+    },
+    {
+      "value": "petrol-blocks-*",
+      "label": "petrol-blocks-*"
+    }
   ],
   "content": [
     {
