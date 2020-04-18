@@ -18,22 +18,9 @@ module.exports = {
         loader: 'file-loader?name=/[hash].[ext]'
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            sourceType: 'module',
-            presets: [
-              ['@babel/preset-env', { targets: { esmodules: true } }],
-              '@babel/preset-react'
-            ],
-            plugins: [
-              '@babel/plugin-syntax-object-rest-spread',
-              '@babel/plugin-proposal-class-properties'
-            ]
-          }
-        }
+        use: ['babel-loader']
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -41,6 +28,9 @@ module.exports = {
         use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
       }
     ]
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
   },
 
   plugins: [
