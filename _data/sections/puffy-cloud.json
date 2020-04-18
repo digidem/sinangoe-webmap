@@ -7,7 +7,14 @@
   ],
   "title": "A pufffuffy cloud",
   "layerOpacity": [
-    "petrol-blocks-label"
+    {
+      "value": "bing-satellite",
+      "label": "bing-satellite"
+    },
+    {
+      "value": "petrol-blocks-*",
+      "label": "petrol-blocks-*"
+    }
   ],
   "bounds": "[-78.3155, -3.3493, -74.9871, 0.6275]",
   "id": "puff"
