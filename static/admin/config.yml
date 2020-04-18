@@ -16,9 +16,9 @@ collections:
         label: Mapbox Settings
         file: _data/settings/mapbox.json
         fields: 
-      #    - label: mapbox
-      #      name: mapbox 
-      #      widget: mapbox
+          - label: mapbox
+            name: mapbox 
+            widget: mapbox
           - name: layers
             label: Layers
             widget: list

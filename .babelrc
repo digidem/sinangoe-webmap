@@ -1,9 +1,10 @@
 {
   "presets": [
-    ["@babel/preset-env", {"debug": true}],
+    "@babel/preset-env",
     "@babel/preset-react"
   ],
   "plugins": [
+    "babel-plugin-react-css-modules",
     "@babel/plugin-syntax-object-rest-spread",
     "@babel/plugin-proposal-object-rest-spread"
   ]
