@@ -24,6 +24,11 @@ export const createControl = ({
   previewRef
 }) => {
   class Control extends React.Component {
+    constructor (props) {
+      super(props)
+      mapboxgl.accessToken = props.accessToken
+    }
+
     render () {
       return <InnerControl {...this.props} />
     }
@@ -73,8 +78,6 @@ export const createControl = ({
   Control.defaultProps = defaultProps
   return Control
 }
-
-mapboxgl.accessToken = 'pk.eyJ1IjoiYWxpeWEiLCJhIjoiY2lzZDVhbjM2MDAwcTJ1cGY4YTN6YmY4cSJ9.NxK9jMmYZsA32ol_IZGs5g'
 
 const MapPreview = React.memo(function ({ style, onStyleLoad }) {
   // Netlify-CMS Preview elements are rendered in an iframe
