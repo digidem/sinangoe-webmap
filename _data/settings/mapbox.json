@@ -1,11 +1,1 @@
-{
-  "layers": [
-    {
-      "id": "bing-satellite"
-    },
-    {
-      "id": "petrol-blocks-*"
-    }
-  ],
-  "mapbox": "mapbox://styles/aliya/cjgowcgqq00a62spkeo922ik6"
-}
+{}
