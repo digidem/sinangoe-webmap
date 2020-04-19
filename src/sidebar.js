@@ -234,28 +234,18 @@ module.exports = function (lang, _map) {
     // var msg = translations[lang][key]
     // return msg ? msg.message : translations['en'][key].message
   }
-  function onenter (section) {
+  function onenter (id) {
     entered = true
     var mobile = isMobile()
     var sidebarWidth = document.getElementById('sidebar').clientWidth || 500
     if (map) {
-      // TODO: put custom opacity layers in CMS
-      var opacityMap = {}
-      section.layerOpacity.map((layerId) => {
-        opacityMap[layerId] = 1
-      })
-      var view = {
-        id: section.id,
-        layerOpacity: opacityMap,
-        bounds: section.bounds
-      }
-      mapTransition(view, map, {
+      mapTransition(id, map, {
         padding: {top: 0, left: sidebarWidth, right: 0, bottom: 0}
       })
     }
     if (!mobile) return
     var img = new Image()
-    var imageUrl = '/screenshots/' + section.id + '.jpg'
+    var imageUrl = '/screenshots/' + id + '.jpg'
     img.onload = function () {
       if (mobileBackground.style.backgroundImage.indexOf(imageUrl) > -1) {
         mobileBackground.style.opacity = 1
