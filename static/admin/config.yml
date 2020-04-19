@@ -57,6 +57,14 @@ collections:
       - label: Bounds
         name: bounds
         widget: string
+      - label: Pitch
+        name: pitch
+        widget: string
+        required: false
+      - label: Bearing
+        name: bearing
+        widget: string
+        required: false
       - label: Content
         name: content
         widget: list
