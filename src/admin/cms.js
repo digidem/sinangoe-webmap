@@ -1,6 +1,6 @@
 import CMS from 'netlify-cms-app'
 import { Widget as ReorderWidget } from '@ncwidgets/reorder'
-import { Widget as FileRelation } from '@ncwidgets/file-relation'
+import { Widget as FileRelation } from '@karissa/file-relation'
 import { MapboxWidget } from './mapbox-widget'
 
 const mapboxConfig = require('../../mapbox-config.js')

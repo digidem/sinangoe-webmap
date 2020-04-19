@@ -50,7 +50,7 @@ collections:
         widget: ncw-file-relation
         collection: settings
         file: mapbox 
-        target_field: layers
+        target_field: mapbox.layers
         id_field:  id
         display_fields: id
         multiple: true
