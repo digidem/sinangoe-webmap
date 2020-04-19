@@ -127,6 +127,12 @@ function mapTransition (viewId, map, fitBoundsOptions) {
   }
 
   function moveMap () {
+    if (view.pitch) {
+      map.setPitch(view.pitch)
+    }
+    if (view.bearing) {
+      map.setBearing(view.bearing)
+    }
     if (view.bounds) {
       map.fitBounds(view.bounds, fitBoundsOptions)
     } else {

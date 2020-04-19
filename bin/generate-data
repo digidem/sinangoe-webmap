@@ -44,8 +44,15 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
 
       map_views[id] = {
         bounds: JSON.parse(section.bounds),
-        layerOpacity: layers
+        layerOpacity: layers,
+        pitch: section.pitch,
+        bearing: section.bearing
       }
+
+      delete section.bounds
+      delete section.layerOpacity
+      delete section.pitch
+      delete section.bearing
       sections.push(section)
     })
 
