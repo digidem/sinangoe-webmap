@@ -5,12 +5,15 @@ var fs = require('fs')
 
 var map_views = {}
 var sections = []
-var LAYERS_FILES = path.join(__dirname, '../_data/layers')
+
+var MAPBOX_FILE = path.join(__dirname, '../_data/settings/mapbox.json')
 var SECTION_FILES = path.join(__dirname, '../_data/sections')
 var OUTPUT_FILE = path.join(__dirname, '..', '_data', 'data.json')
-fs.readdir(LAYERS_FILES, function (err, files) {
+
+fs.readFile(MAPBOX_FILE, function (err, data) {
   if (err) throw err
-  var allLayers = files.map((file) => file.replace('.md', ''))
+  var mapbox = JSON.parse(data.toString()).mapbox
+  var allLayers = mapbox.layers.map((layer) => layer.id)
 
   fs.readdir(SECTION_FILES, function (err, files) {
     if (err) throw err
@@ -36,7 +39,7 @@ fs.readdir(LAYERS_FILES, function (err, files) {
       // for those identified in cms, make opacity 1
       // TODO: allow custom opacity instead of binary
       section.layerOpacity.map((layer) => {
-        layers[layer] = 1
+        layers[layer.value] = 1
       })
 
       map_views[id] = {
