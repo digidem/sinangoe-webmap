@@ -36,7 +36,7 @@ collections:
     editor: 
       preview: false
     create: true
-    slug: "{{slug}}"
+    slug: "{{id}}"
     extension: 'json'
     fields: 
       - label: id
