@@ -63,7 +63,7 @@ module.exports = function () {
     container: 'map',
     center: defaultCenter,
     zoom: 6,
-    style: config.style,
+    style: content.style,
     hash: false,
     zoomControl: false,
     attributionControl: false,

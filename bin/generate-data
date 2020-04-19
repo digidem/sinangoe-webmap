@@ -58,7 +58,7 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
 
     fs.writeFileSync(
       OUTPUT_FILE,
-      JSON.stringify({ sections, map_views }, null, 2)
+      JSON.stringify({ style: mapbox.styleURL, sections, map_views }, null, 2)
     )
   })
 })
