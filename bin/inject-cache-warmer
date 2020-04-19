@@ -9,6 +9,7 @@ var sw = fs.readFileSync(path.join(__dirname, '../dist/sw.js'), 'utf8')
 var getMapboxUrls = require('../precache/get-mapbox-urls')
 var getImageUrls = require('../precache/get-image-urls')
 var config = require('../mapbox-config')
+var content = require('../_data/data.json')
 
 var cachableUrls = [
   'https://fonts.googleapis.com/css?family=Nunito+Sans',
@@ -19,7 +20,7 @@ var cachableUrls = [
 var pending = 2
 
 getImageUrls(html, done)
-getMapboxUrls(config.style, config.accessToken, done)
+getMapboxUrls(content.style, config.accessToken, done)
 
 function done (err, urls) {
   if (err) return console.error(err)

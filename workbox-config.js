@@ -6,6 +6,7 @@ module.exports = {
   'swDest': 'dist/sw.js',
   'swSrc': './static/sw.js',
   'globIgnores': [
-    '../workbox-config.js'
+    '../workbox-config.js',
+    'admin/cms.js'
   ]
 }
