@@ -15,7 +15,7 @@ document.body.style.margin = 0
 
 var map = window.map = new mapboxgl.Map({
   container: mapDiv,
-  style: config.style,
+  style: content.style,
   zoomControl: false,
   attributionControl: false,
   logoPosition: 'bottom-right'
