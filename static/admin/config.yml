@@ -59,12 +59,16 @@ collections:
         widget: string
       - label: Pitch
         name: pitch
-        widget: string
+        widget: number
+        valueType: float
         required: false
+        default: 0
       - label: Bearing
         name: bearing
-        widget: string
+        widget: number
+        valueType: float
         required: false
+        default: 0
       - label: Content
         name: content
         widget: list
