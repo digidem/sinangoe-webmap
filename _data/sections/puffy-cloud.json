@@ -3,6 +3,10 @@
     {
       "type": "image",
       "image": "/static/uploads/puffycloud.jpg"
+    },
+    {
+      "type": "text",
+      "text": "Here is some great text we're going to talk about"
     }
   ],
   "title": "A pufffuffy cloud",
