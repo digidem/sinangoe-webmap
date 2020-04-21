@@ -6,7 +6,8 @@
     },
     {
       "type": "text",
-      "text": "Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important."
+      "text": "Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.",
+      "es": "spnanannish"
     }
   ],
   "title": {
@@ -15,12 +16,24 @@
   },
   "layerOpacity": [
     {
-      "value": "bing-satellite",
-      "label": "bing-satellite"
+      "value": "ec-kofan-ancestral-territory-2fe9fl copy 1",
+      "label": "ec-kofan-ancestral-territory-2fe9fl copy 1"
     },
     {
-      "value": "petrol-blocks-*",
-      "label": "petrol-blocks-*"
+      "value": "Siangoe area",
+      "label": "Siangoe area"
+    },
+    {
+      "value": "mapbox-satellite",
+      "label": "mapbox-satellite"
+    },
+    {
+      "value": "Carreteras copy",
+      "label": "Carreteras copy"
+    },
+    {
+      "value": "small rivers copy 1",
+      "label": "small rivers copy 1"
     }
   ],
   "bounds": "[-77.2757, -1.2483, -77.2156, -1.2044]",
