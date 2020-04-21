@@ -227,7 +227,7 @@ module.exports = function (lang, _map) {
 
   function message (key) {
     var msg = key[lang]
-    return msg ? msg.message : msg[DEFAULT_LANGUAGE]
+    return !msg ? key[DEFAULT_LANGUAGE] : msg
   }
 
   function onenter (id) {
@@ -278,7 +278,7 @@ module.exports = function (lang, _map) {
               placeholderImg: item.placeholderImg
             })
           case 'text':
-            return html`<p>${marked(message(item))}</p>`
+            return html`<p>${raw(marked(message(item)))}</p>`
           case 'image':
             return image(item.image)
           default:

@@ -112,7 +112,7 @@ module.exports = function () {
 
   map.once('styledata', function () {
     map.addSource('bing', bingSource)
-    map.addLayer(bing, 'territory-outline')
+    // map.addLayer(bing, 'territory-outline') // TODO: fix
     map.setLayoutProperty('background', 'visibility', 'none')
     map.setPaintProperty('background', 'background-opacity', 0)
   })

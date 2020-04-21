@@ -163,8 +163,9 @@ function setLayerOpacity (map, layerId, opacity, duration) {
   // Workaround for https://github.com/mapbox/mapbox-gl-js/issues/6706
   // Need to call `setPaintProperty()` on the layer, not `map`
   propNames.forEach(function (propName) {
-    layer.setPaintProperty(propName + '-transition', {duration: duration, delay: 0})
-    map.setPaintProperty(layerId, propName, opacity)
+    // TODO: are these always guaranteed to be in the map?
+    // layer.setPaintProperty(propName + '-transition', {duration: duration, delay: 0})
+    // map.setPaintProperty(layerId, propName, opacity)
   })
 }
 
