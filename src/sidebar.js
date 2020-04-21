@@ -113,6 +113,9 @@ var style = css`
         margin-bottom: 2em;
         margin-top: 2em;
         font-size: 1.1rem;
+        a {
+          color: #fff;
+        }
       }
       p.big {
         font-weight: bold;
@@ -122,9 +125,6 @@ var style = css`
         font-size: .8em;
         padding-top: 20px;
         color: #ccc;
-        a {
-          color: #fff;
-        }
       }
     }
   }
@@ -278,7 +278,7 @@ module.exports = function (lang, _map) {
               placeholderImg: item.placeholderImg
             })
           case 'text':
-            return html`<p>${raw(marked(message(item)))}</p>`
+            return html`${raw(marked(message(item)))}`
           case 'image':
             return image(item.image)
           default:
