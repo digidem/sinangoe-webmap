@@ -10,15 +10,6 @@ var mobile = window.innerWidth < 601
 var qs = querystring.parse(window.location.search.replace('?', ''))
 var lang = qs.lang || 'es'
 
-if (typeof qs.translate !== 'undefined') {
-  lang = 'xx'
-  window._jipt = [['project', 'mapa-waorani-block22']]
-  const script = document.createElement('script')
-  script.type = 'text/javascript'
-  script.src = '//cdn.crowdin.com/jipt/jipt.js'
-  document.head.appendChild(script)
-}
-
 var map
 var sidebarEl = document.getElementById('sidebar-wrapper')
 
