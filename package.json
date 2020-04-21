@@ -11,7 +11,7 @@
     "build:sw": "workbox injectManifest && bin/inject-cache-warmer",
     "build:js": "npm run build:map && npm run build:admin",
     "build:admin": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js",
-    "build:map": "NODE_ENV=production browserify --debug -t [ sheetify/transform -u sheetify-nested ] -p [ css-extract -o dist/bundle.css ] -g unassertify -g envify -t yo-yoify -t babelify -g uglifyify -p common-shakeify -p browser-pack-flat/plugin src/index.js | uglifyjs --source-map 'content=inline' -c comparisons=false -m -o dist/bundle.js",
+    "build:map": "NODE_ENV=production browserify --debug -t [ sheetify/transform -u sheetify-nested ] -p [ css-extract -o dist/bundle.css ] -g unassertify -g envify -t yo-yoify -t babelify -p common-shakeify -p browser-pack-flat/plugin src/index.js | terser --source-map 'content=inline' -c comparisons=false -m -o dist/bundle.js",
     "build:static": "copyup 'static/**/*' dist && bin/ssr",
     "start:map": "budo src/index.js:bundle.js -d static -- -t [ sheetify/transform -u sheetify-nested]",
     "start:admin": "webpack-dev-server --config build/webpack.dev.js",
@@ -53,6 +53,7 @@
     "on-load": "^3.4.0",
     "react-mapbox-gl": "^4.8.3",
     "sheetify": "^6.1.1",
+    "terser": "^4.6.11",
     "workbox-cli": "^3.2.0"
   },
   "devDependencies": {
@@ -84,8 +85,6 @@
     "standard": "^10.0.3",
     "style-loader": "^1.1.4",
     "traverse": "^0.6.6",
-    "uglify-js": "^3.3.27",
-    "uglifyify": "^5.0.0",
     "unassertify": "^2.1.1",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
