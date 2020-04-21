@@ -1,4 +1,5 @@
 const css = require('sheetify')
+const marked = require('marked')
 const html = require('nanohtml')
 const raw = require('nanohtml/raw')
 const onIntersectOrig = require('on-intersect')
@@ -8,8 +9,8 @@ var content = require('../_data/data.json')
 var ZoomableImage = require('./image')
 var ZoomableVideo = require('./video')
 
-var ZoomableImage = require('./image')
-var ZoomableVideo = require('./video')
+// TODO: programmatically set default language based on settings
+const DEFAULT_LANGUAGE = 'es'
 
 function onIntersect () {
   if (typeof window === 'undefined') return
@@ -17,11 +18,6 @@ function onIntersect () {
 }
 
 var map
-var translations = {
-  es: require('../messages/es.json'),
-  en: require('../messages/en.json'),
-  xx: require('../messages/xx.json')
-}
 
 var mapTransition = require('./map_transition')
 
@@ -230,10 +226,10 @@ module.exports = function (lang, _map) {
   var entered = true
 
   function message (key) {
-    return key
-    // var msg = translations[lang][key]
-    // return msg ? msg.message : translations['en'][key].message
+    var msg = key[lang]
+    return msg ? msg.message : msg[DEFAULT_LANGUAGE]
   }
+
   function onenter (id) {
     entered = true
     var mobile = isMobile()
@@ -282,11 +278,11 @@ module.exports = function (lang, _map) {
               placeholderImg: item.placeholderImg
             })
           case 'text':
-            return html`<p>${message(item.text)}</p>`
+            return html`<p>${marked(message(item))}</p>`
           case 'image':
             return image(item.image)
           default:
-            return raw(message(item.text))
+            return raw(message(item))
         }
       })
       contents.unshift(autoScroll)

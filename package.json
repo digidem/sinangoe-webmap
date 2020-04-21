@@ -34,7 +34,7 @@
   "dependencies": {
     "@digidem/attribution-control": "^1.0.0",
     "@karissa/file-relation": "^0.7.0",
-    "@ncwidgets/file-relation": "^0.7.0",
+    "@ncwidgets/id": "^0.7.0",
     "@ncwidgets/reorder": "^0.7.0",
     "@vimeo/player": "^2.6.1",
     "babel-loader": "^8.1.0",
@@ -44,6 +44,7 @@
     "lozad": "^1.4.0",
     "mapbox-gl": "^0.45.0",
     "mapbox-gl-toggle-control": "^1.0.5",
+    "marked": "^1.0.0",
     "nanocomponent": "^6.5.2",
     "nanohtml": "^1.2.4",
     "nanomorph": "^5.1.3",
