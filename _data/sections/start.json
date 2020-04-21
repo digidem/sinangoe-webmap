@@ -1,6 +1,6 @@
 {
   "title": {
-    "es": "In defense of a forest homeland!",
+    "es": "Segundo capitulo",
     "en": "english"
   },
   "bounds": "[-81.94, -5.79, -73.15, 2.65]",
@@ -24,7 +24,7 @@
     {
       "type": "text",
       "text": "The Waorani people live in the upper headwaters of the Amazon river in Ecuador, one of the most biodiverse rainforests on earth. Their territory is 2.5 million acres, roughly the size of Yellowstone National Park",
-      "es": "this is the funnest thing ever\n\n\n\nheloooo lolol",
+      "es": "y aqui mas texto\n\n\n\ny mas texto\n\n\n\ny mas",
       "en": "[english](https://english.com)\n\n*this is the funnest thing ever*\n\n\n\nheloooo lolol"
     },
     {
@@ -39,6 +39,6 @@
     }
   ],
   "id": "start",
-  "bearing": "-60",
+  "bearing": -62,
   "pitch": "60"
 }
