@@ -1,6 +1,9 @@
 {
   "id": "wildlife",
-  "title": "Wildlife",
+  "title": {
+    "es": "wildlife, spanish",
+    "en": "wildlife, english"
+  },
   "layerOpacity": [
     {
       "value": "background",

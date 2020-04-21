@@ -9,7 +9,10 @@
       "text": "Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important."
     }
   ],
-  "title": "A pufffuffy cloud",
+  "title": {
+    "en": "A pufffuffy cloud",
+    "es": "spanish"
+  },
   "layerOpacity": [
     {
       "value": "bing-satellite",
