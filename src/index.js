@@ -8,7 +8,7 @@ const prefetch = require('./prefetch')
 var mobile = window.innerWidth < 601
 
 var qs = querystring.parse(window.location.search.replace('?', ''))
-var lang = qs.lang || 'en'
+var lang = qs.lang || 'es'
 
 if (typeof qs.translate !== 'undefined') {
   lang = 'xx'
