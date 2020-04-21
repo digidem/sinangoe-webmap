@@ -6,12 +6,12 @@
   "bounds": "[-81.94, -5.79, -73.15, 2.65]",
   "layerOpacity": [
     {
-      "value": "bing-satellite",
-      "label": "bing-satellite"
+      "value": "Carreteras copy",
+      "label": "Carreteras copy"
     },
     {
-      "value": "caminos-caseria",
-      "label": "caminos-caseria"
+      "value": "background",
+      "label": "background"
     }
   ],
   "content": [
