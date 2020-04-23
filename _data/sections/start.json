@@ -1,44 +1,48 @@
 {
   "title": {
-    "es": "Segundo capitulo",
+    "es": "Sinangoe: nuestra comunidad A’I Cofán en defensa de nuestro territorio ancestral",
     "en": "english"
   },
-  "bounds": "[-81.94, -5.79, -73.15, 2.65]",
+  "bounds": "[[-91.62, -11.56, -53.73, 13.78]",
   "layerOpacity": [
     {
-      "value": "Carreteras copy",
-      "label": "Carreteras copy"
+      "value": "mapbox-satellite",
+      "label": "mapbox-satellite"
     },
     {
-      "value": "background",
-      "label": "background"
+      "value": "mapbox-terrain-rgb",
+      "label": "mapbox-terrain-rgb"
+    },
+    {
+      "value": "ec-kofan-ancestral-territory-2fe9fl copy 1",
+      "label": "ec-kofan-ancestral-territory-2fe9fl copy 1"
+    },
+    {
+      "value": "ec-kofan-ancestral-territory-2fe9fl",
+      "label": "ec-kofan-ancestral-territory-2fe9fl"
+    },
+    {
+      "value": "Siangoe area",
+      "label": "Siangoe area"
+    },
+    {
+      "value": "Siangoe area copy 2",
+      "label": "Siangoe area copy 2"
+    },
+    {
+      "value": "Frontera internacional",
+      "label": "Frontera internacional"
     }
   ],
   "content": [
     {
-      "type": "video",
-      "background": true,
-      "url": "https://vimeo.com/270209852/d857a916b5",
-      "placeholderImg": "/static/uploads/1territory.jpg"
-    },
-    {
-      "type": "text",
-      "text": "The Waorani people live in the upper headwaters of the Amazon river in Ecuador, one of the most biodiverse rainforests on earth. Their territory is 2.5 million acres, roughly the size of Yellowstone National Park",
-      "es": "y aqui mas texto\n\n\n\ny mas texto\n\n\n\ny mas",
-      "en": "[english](https://english.com)\n\n*this is the funnest thing ever*\n\n\n\nheloooo lolol"
-    },
-    {
-      "type": "image",
-      "image": "/static/uploads/1e.jpg"
-    },
-    {
       "type": "text",
       "text": "Before the oil companies, the loggers, the rubber tappers, and even before the Spanish conquistadors, the Waorani were known to the Incas and others as fierce defenders of the mountainous forests south of the mighty Napo River and north of the snaking Curaray. ",
-      "es": "sansih",
+      "es": "Por miles de años, los A’I Cofán hemos ocupado un territorio extensivo en la parte noroeste de la Amazonía ecuatoriana y suroeste de la Amazonia colombiana.Somos un pueblo pescador íntimamente relacionado a nuestro territorio, conocidos como grandes tomadores de yagé (ayahuasca).\n\nEn el piedemonte de los Andes, nuestra comunidad sigue manteniendo intacto a nuestro territorio ancestral de más de 60,000 hectáreas. Aunque forma parte del Parque Nacional Cayambe-Coca, nuestro territorio sigue amenazado por minería, cacería y pesca ilegal.",
       "en": "sdfsdf"
     }
   ],
   "id": "start",
-  "bearing": -62,
+  "bearing": 4,
   "pitch": "60"
 }
