@@ -12,26 +12,40 @@
   },
   "layerOpacity": [
     {
+      "value": "mapbox-satellite",
+      "label": "mapbox-satellite"
+    },
+    {
+      "value": "mapbox-terrain-rgb",
+      "label": "mapbox-terrain-rgb"
+    },
+    {
       "value": "ec-kofan-ancestral-territory-2fe9fl copy 1",
       "label": "ec-kofan-ancestral-territory-2fe9fl copy 1"
+    },
+    {
+      "value": "ec-kofan-ancestral-territory-2fe9fl",
+      "label": "ec-kofan-ancestral-territory-2fe9fl"
     },
     {
       "value": "Siangoe area",
       "label": "Siangoe area"
     },
     {
-      "value": "mapbox-satellite",
-      "label": "mapbox-satellite"
+      "value": "Siangoe area copy 2",
+      "label": "Siangoe area copy 2"
     },
     {
-      "value": "Carreteras copy",
-      "label": "Carreteras copy"
+      "value": "ec-kofan-ancestral-territory-2fe9fl copy",
+      "label": "ec-kofan-ancestral-territory-2fe9fl copy"
     },
     {
-      "value": "small rivers copy 1",
-      "label": "small rivers copy 1"
+      "value": "ec-kofan-ancestral-territory-2fe9fl copy 3",
+      "label": "ec-kofan-ancestral-territory-2fe9fl copy 3"
     }
   ],
   "bounds": "[-77.2757, -1.2483, -77.2156, -1.2044]",
-  "id": "puff"
+  "id": "puff",
+  "pitch": 60,
+  "bearing": 0
 }
