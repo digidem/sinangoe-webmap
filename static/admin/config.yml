@@ -53,15 +53,15 @@ collections:
         fields:
           - {label: ES, name: es, widget: string}
           - {label: EN, name: en, widget: string, required: false}
-      - label: Visible Map Layers
-        name: layerOpacity
-        widget: ncw-file-relation
-        collection: settings
-        file: mapbox 
-        target_field: mapbox.layers
-        id_field:  id
-        display_fields: id
-        multiple: true
+            # - label: Visible Map Layers
+            #name: layerOpacity
+            #        widget: ncw-file-relation
+            #        collection: settings
+#        file: mapbox 
+  #      target_field: mapbox.layers
+   #     id_field:  id
+    #    display_fields: id
+     #   multiple: true
       - label: Min Lat
         name: minLat
         widget: number
