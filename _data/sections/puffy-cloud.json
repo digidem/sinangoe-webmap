@@ -2,7 +2,7 @@
   "pitch": 0,
   "maxLon": 0.218259,
   "minLat": -77.650422,
-  "bearing": 105,
+  "bearing": 0,
   "title_en": "Section 1",
   "title": "Nuestro Territorio es Nuestro Vida",
   "content": [
@@ -21,22 +21,6 @@
     {
       "value": "background",
       "label": "background"
-    },
-    {
-      "value": "national-parks copy 2",
-      "label": "national-parks copy 2"
-    },
-    {
-      "value": "Siangoe area copy 1",
-      "label": "Siangoe area copy 1"
-    },
-    {
-      "value": "small rivers copy 17",
-      "label": "small rivers copy 17"
-    },
-    {
-      "value": "bfrizzelle-major-rivers-4tu0hm copy 9",
-      "label": "bfrizzelle-major-rivers-4tu0hm copy 9"
     },
     {
       "value": "Todos puntos copy 1",
@@ -181,6 +165,18 @@
     {
       "value": "Sinangoe label dark",
       "label": "Sinangoe label dark"
+    },
+    {
+      "value": "Sinangoe Area",
+      "label": "Sinangoe Area"
+    },
+    {
+      "value": "Small Rivers",
+      "label": "Small Rivers"
+    },
+    {
+      "value": "bfrizzelle-major-rivers",
+      "label": "bfrizzelle-major-rivers"
     }
   ],
   "id": "puff",
