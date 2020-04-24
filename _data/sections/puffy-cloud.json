@@ -15,12 +15,176 @@
   "minLon": -77.379525,
   "layerOpacity": [
     {
-      "value": "mapbox-satellite",
-      "label": "mapbox-satellite"
-    },
-    {
       "value": "mapbox-terrain-rgb",
       "label": "mapbox-terrain-rgb"
+    },
+    {
+      "value": "ne-10m-land-ai2i9o",
+      "label": "ne-10m-land-ai2i9o"
+    },
+    {
+      "value": "background",
+      "label": "background"
+    },
+    {
+      "value": "national-parks copy 2",
+      "label": "national-parks copy 2"
+    },
+    {
+      "value": "Siangoe area copy 1",
+      "label": "Siangoe area copy 1"
+    },
+    {
+      "value": "small rivers copy 17",
+      "label": "small rivers copy 17"
+    },
+    {
+      "value": "bfrizzelle-major-rivers-4tu0hm copy 9",
+      "label": "bfrizzelle-major-rivers-4tu0hm copy 9"
+    },
+    {
+      "value": "Todos puntos copy 1",
+      "label": "Todos puntos copy 1"
+    },
+    {
+      "value": "area-invisibles",
+      "label": "area-invisibles"
+    },
+    {
+      "value": "entierros",
+      "label": "entierros"
+    },
+    {
+      "value": "casa-ancestros",
+      "label": "casa-ancestros"
+    },
+    {
+      "value": "casas",
+      "label": "casas"
+    },
+    {
+      "value": "chacra",
+      "label": "chacra"
+    },
+    {
+      "value": "campamento-cofan",
+      "label": "campamento-cofan"
+    },
+    {
+      "value": "cuento-anestral",
+      "label": "cuento-anestral"
+    },
+    {
+      "value": "cerros-mirador",
+      "label": "cerros-mirador"
+    },
+    {
+      "value": "cueva",
+      "label": "cueva"
+    },
+    {
+      "value": "yoco",
+      "label": "yoco"
+    },
+    {
+      "value": "yage",
+      "label": "yage"
+    },
+    {
+      "value": "semilla-artesania",
+      "label": "semilla-artesania"
+    },
+    {
+      "value": "planta",
+      "label": "planta"
+    },
+    {
+      "value": "palmera",
+      "label": "palmera"
+    },
+    {
+      "value": "moretal",
+      "label": "moretal"
+    },
+    {
+      "value": "liana",
+      "label": "liana"
+    },
+    {
+      "value": "chonta",
+      "label": "chonta"
+    },
+    {
+      "value": "barbasco",
+      "label": "barbasco"
+    },
+    {
+      "value": "arbol",
+      "label": "arbol"
+    },
+    {
+      "value": "playa",
+      "label": "playa"
+    },
+    {
+      "value": "canyon",
+      "label": "canyon"
+    },
+    {
+      "value": "cascadas",
+      "label": "cascadas"
+    },
+    {
+      "value": "animal-extinccion",
+      "label": "animal-extinccion"
+    },
+    {
+      "value": "animal",
+      "label": "animal"
+    },
+    {
+      "value": "armadillo",
+      "label": "armadillo"
+    },
+    {
+      "value": "boa",
+      "label": "boa"
+    },
+    {
+      "value": "ave",
+      "label": "ave"
+    },
+    {
+      "value": "huangana",
+      "label": "huangana"
+    },
+    {
+      "value": "gallo-de-pena",
+      "label": "gallo-de-pena"
+    },
+    {
+      "value": "osoanteojos",
+      "label": "osoanteojos"
+    },
+    {
+      "value": "hormigas",
+      "label": "hormigas"
+    },
+    {
+      "value": "saladero",
+      "label": "saladero"
+    },
+    {
+      "value": "sitio de pesca",
+      "label": "sitio de pesca"
+    },
+    {
+      "value": "Sinangoe Village",
+      "label": "Sinangoe Village"
+    },
+    {
+      "value": "Sinangoe label dark",
+      "label": "Sinangoe label dark"
     }
   ],
   "id": "puff",
