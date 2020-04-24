@@ -1,4 +1,12 @@
 {
+  "pitch": 60,
+  "maxLon": 0.218259,
+  "minLat": -77.650422,
+  "bearing": 105,
+  "title": {
+    "en": "Section 1",
+    "es": "Nuestro Territorio es Nuestro Vida"
+  },
   "content": [
     {
       "type": "text",
@@ -6,10 +14,7 @@
       "es": "**Nuestro territorio es nuestra vida. Durante los dos últimos años, a través de más de 150 días de recorridos en cada rincón de nuestro territorio ancestral, hemos mapeado nuestra tierra para exigir al gobierno ecuatoriano que nos da reconocimiento de título de propiedad sobre más de 60.000 hectáreas de selva virgen que hemos ocupado por miles de años como pueblo originario. Más de 5000 puntos GPS han sido recolectado por nuestros mapeadores comunitarios. Contándoles nuestra lucha, aquí les presentamos un resumen de este gran trabajo de mapeo para demostrar nuestra ancestralidad, el uso de nuestro territorio y la conexión tan importante que tenemos con nuestra selva.**"
     }
   ],
-  "title": {
-    "en": "Section 1",
-    "es": "Nuestro Territorio es Nuestro Vida"
-  },
+  "minLon": -77.379525,
   "layerOpacity": [
     {
       "value": "mapbox-satellite",
@@ -18,13 +23,16 @@
     {
       "value": "mapbox-terrain-rgb",
       "label": "mapbox-terrain-rgb"
+    },
+    {
+      "value": "Fronteras Internationales dark",
+      "label": "Fronteras Internationales dark"
+    },
+    {
+      "value": "national-parks copy 2",
+      "label": "national-parks copy 2"
     }
   ],
-  "minLat": -77.650422,
-  "maxLat": 0.059575,
-  "minLon": -77.379525,
-  "maxLon": 0.218259,
   "id": "puff",
-  "pitch": 60,
-  "bearing": 105
+  "maxLat": 0.059575
 }
