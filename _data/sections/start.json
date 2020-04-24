@@ -17,18 +17,6 @@
   "minLon": -53.73,
   "layerOpacity": [
     {
-      "value": "mapbox-terrain-rgb",
-      "label": "mapbox-terrain-rgb"
-    },
-    {
-      "value": "ec-kofan-ancestral-territory-2fe9fl copy 1",
-      "label": "ec-kofan-ancestral-territory-2fe9fl copy 1"
-    },
-    {
-      "value": "ec-kofan-ancestral-territory-2fe9fl",
-      "label": "ec-kofan-ancestral-territory-2fe9fl"
-    },
-    {
       "value": "Frontera internacional",
       "label": "Frontera internacional"
     },
@@ -47,6 +35,10 @@
     {
       "value": "Sinangoe Area",
       "label": "Sinangoe Area"
+    },
+    {
+      "value": "ne-10m-land-ai2i9o",
+      "label": "ne-10m-land-ai2i9o"
     }
   ],
   "id": "start",
