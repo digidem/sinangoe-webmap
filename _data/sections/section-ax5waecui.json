@@ -1,0 +1,23 @@
+{
+  "pitch": 0,
+  "maxLon": 0,
+  "minLat": 0,
+  "bearing": 0,
+  "title_en": "our",
+  "title": "Sinangoe: nuestra comunidad unida para defender su territorio",
+  "content": [
+    {
+      "type": "text",
+      "es": "Conformada por 45 familias, nuestra comunidad es la segunda comunidad A’I Cofán más grande de la Amazonia ecuatoriana. Ubicados a la ribera del Río Aguarico, dependemos principalmente del río para nuestra sobrevivencia, y por décadas hemos vigilado sus riberas para evitar el ingreso de invasores.Cuando nuestra gente empezó a observar huellas, senderos, campamentos y desechos dejados por mineros ilegales, cazadores y pescadores que entraban al territorio (y al Parque Nacional Cayambe-Coca) y que constatamos la inacción del gobierno para vigilar el parque, hemos decidido de adoptar de manera unánime una ley propia de defensa territorial y formar una guardia indígena para defender nuestro territorio y expulsar a los invasores."
+    }
+  ],
+  "minLon": 0,
+  "layerOpacity": [
+    {
+      "value": "background",
+      "label": "background"
+    }
+  ],
+  "id": "section-aX5waeCUi",
+  "maxLat": 0
+}
