@@ -39,6 +39,10 @@
     {
       "value": "ne-10m-land-ai2i9o",
       "label": "ne-10m-land-ai2i9o"
+    },
+    {
+      "value": "mapbox-satellite",
+      "label": "mapbox-satellite"
     }
   ],
   "id": "start",
