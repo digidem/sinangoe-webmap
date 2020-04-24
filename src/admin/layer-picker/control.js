@@ -25,14 +25,12 @@ export class Control extends React.Component {
     const fieldDisplay = field.get('display_fields') || fieldId
 
     const mapbox = await loadEntry(collection, file)
-    console.log('mapboxStyleURL', mapbox)
     const styleURL = mapbox.data[targetField]
 
     getMapboxStyle(styleURL, (err, style) => {
       // TODO: show user the error
       if (err) console.error(err)
       const layers = style.layers
-      console.log('layers', layers)
 
       const options = layers.map(option => {
         let value, label
