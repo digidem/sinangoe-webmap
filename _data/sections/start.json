@@ -3,7 +3,11 @@
     "es": "Sinangoe: nuestra comunidad A’I Cofán en defensa de nuestro territorio ancestral",
     "en": "english"
   },
-  "bounds": "[[-91.62, -11.56, -53.73, 13.78]",
+  "bounds": "[-91.62, -11.56, -53.73, 13.78]",
+  "minLat": -91.62,
+  "maxLat": -11.56,
+  "minLon": -53.73,
+  "maxLon": 13.78,
   "layerOpacity": [
     {
       "value": "mapbox-satellite",

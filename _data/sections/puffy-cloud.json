@@ -20,7 +20,10 @@
       "label": "mapbox-terrain-rgb"
     }
   ],
-  "bounds": "[-77.650422, 0.059575, -77.379525, 0.218259] ",
+  "minLat": -77.650422,
+  "maxLat": 0.059575,
+  "minLon": -77.379525,
+  "maxLon": 0.218259,
   "id": "puff",
   "pitch": 60,
   "bearing": 105

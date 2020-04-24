@@ -11,6 +11,10 @@
     }
   ],
   "bounds": " [-77.74, -0.66, -75.3, 0.62]",
+  "minLat": -77.74,
+  "maxLat": -0.66,
+  "minLon": -75.3,
+  "maxLon": 0.62,
   "content": [
     {
       "type": "text",

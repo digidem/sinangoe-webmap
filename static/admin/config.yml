@@ -62,9 +62,22 @@ collections:
         id_field:  id
         display_fields: id
         multiple: true
-      - label: Bounds
-        name: bounds
-        widget: string
+      - label: Min Lat
+        name: minLat
+        widget: number
+        valueType: float
+      - label: Max Lat
+        name: maxLat
+        widget: number
+        valueType: float
+      - label: Min Lon
+        name: minLon
+        widget: number
+        valueType: float
+      - label: Max Lon
+        name: maxLon
+        widget: number
+        valueType: float
       - label: Pitch
         name: pitch
         widget: number

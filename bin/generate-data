@@ -41,9 +41,15 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
       section.layerOpacity.map((layer) => {
         layers[layer.value] = 1
       })
+      var bounds = [
+        section.minLat, 
+        section.maxLat,
+        section.minLon,
+        section.maxLon
+      ]
 
       map_views[id] = {
-        bounds: JSON.parse(section.bounds),
+        bounds: bounds,
         layerOpacity: layers,
         pitch: section.pitch,
         bearing: section.bearing
