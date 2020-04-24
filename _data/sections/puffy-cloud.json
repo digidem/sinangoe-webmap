@@ -15,10 +15,6 @@
   "minLon": -77.379525,
   "layerOpacity": [
     {
-      "value": "mapbox-terrain-rgb",
-      "label": "mapbox-terrain-rgb"
-    },
-    {
       "value": "ne-10m-land-ai2i9o",
       "label": "ne-10m-land-ai2i9o"
     },
