@@ -1,16 +1,21 @@
 {
-  "title": "Sinangoe: nuestra comunidad A’I Cofán en defensa de nuestro territorio ancestral",
+  "pitch": "60",
+  "maxLon": 13.78,
+  "minLat": -91.62,
+  "bearing": 4,
   "title_en": "english",
   "bounds": "[-91.62, -11.56, -53.73, 13.78]",
-  "minLat": -91.62,
-  "maxLat": -11.56,
-  "minLon": -53.73,
-  "maxLon": 13.78,
-  "layerOpacity": [
+  "title": "Sinangoe: nuestra comunidad A’I Cofán en defensa de nuestro territorio ancestral",
+  "content": [
     {
-      "value": "mapbox-satellite",
-      "label": "mapbox-satellite"
-    },
+      "type": "text",
+      "text": "Before the oil companies, the loggers, the rubber tappers, and even before the Spanish conquistadors, the Waorani were known to the Incas and others as fierce defenders of the mountainous forests south of the mighty Napo River and north of the snaking Curaray. ",
+      "es": "Por miles de años, los A’I Cofán hemos ocupado un territorio extensivo en la parte noroeste de la Amazonía ecuatoriana y suroeste de la Amazonia colombiana.Somos un pueblo pescador íntimamente relacionado a nuestro territorio, conocidos como grandes tomadores de yagé (ayahuasca).\n\nEn el piedemonte de los Andes, nuestra comunidad sigue manteniendo intacto a nuestro territorio ancestral de más de 60,000 hectáreas. Aunque forma parte del Parque Nacional Cayambe-Coca, nuestro territorio sigue amenazado por minería, cacería y pesca ilegal.",
+      "en": "sdfsdf"
+    }
+  ],
+  "minLon": -53.73,
+  "layerOpacity": [
     {
       "value": "mapbox-terrain-rgb",
       "label": "mapbox-terrain-rgb"
@@ -34,17 +39,20 @@
     {
       "value": "Frontera internacional",
       "label": "Frontera internacional"
-    }
-  ],
-  "content": [
+    },
     {
-      "type": "text",
-      "text": "Before the oil companies, the loggers, the rubber tappers, and even before the Spanish conquistadors, the Waorani were known to the Incas and others as fierce defenders of the mountainous forests south of the mighty Napo River and north of the snaking Curaray. ",
-      "es": "Por miles de años, los A’I Cofán hemos ocupado un territorio extensivo en la parte noroeste de la Amazonía ecuatoriana y suroeste de la Amazonia colombiana.Somos un pueblo pescador íntimamente relacionado a nuestro territorio, conocidos como grandes tomadores de yagé (ayahuasca).\n\nEn el piedemonte de los Andes, nuestra comunidad sigue manteniendo intacto a nuestro territorio ancestral de más de 60,000 hectáreas. Aunque forma parte del Parque Nacional Cayambe-Coca, nuestro territorio sigue amenazado por minería, cacería y pesca ilegal.",
-      "en": "sdfsdf"
+      "value": "background",
+      "label": "background"
+    },
+    {
+      "value": "Kofan Territory Label dark",
+      "label": "Kofan Territory Label dark"
+    },
+    {
+      "value": "Sinangoe label dark",
+      "label": "Sinangoe label dark"
     }
   ],
   "id": "start",
-  "bearing": 4,
-  "pitch": "60"
+  "maxLat": -11.56
 }
