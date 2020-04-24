@@ -1,18 +1,11 @@
 {
-  "id": "wildlife",
-  "title_en": "",
-  "title": "Un territorio dividido y colonizado",
-  "layerOpacity": [
-    {
-      "value": "mapbox-terrain-rgb",
-      "label": "mapbox-terrain-rgb"
-    }
-  ],
-  "bounds": " [-77.74, -0.66, -75.3, 0.62]",
-  "minLat": -77.74,
-  "maxLat": -0.66,
-  "minLon": -75.3,
+  "pitch": 60,
   "maxLon": 0.62,
+  "minLat": -77.74,
+  "bearing": 2,
+  "title_en": "A territory divided and colonized",
+  "bounds": " [-77.74, -0.66, -75.3, 0.62]",
+  "title": "Un territorio dividido y colonizado",
   "content": [
     {
       "type": "text",
@@ -20,6 +13,77 @@
       "es": "Nuestro gran territorio A’I Cofán fue el primer impactado por la llegada de las petroleras en la Amazonía ecuatoriana hace 50 años. Carreteras, plataformas, oleoductos, pozos y colonización han provocado desplazamiento y una disminución drástica de nuestro territorio A’I Cofán. Actualmente, las comunidades viven en “islas de selva” rodeadas de un mar de deforestación. 50 años después de la primera perforación, los A’I Cofán del Ecuador ocupamos menos de XX hectáreas, o YY% de nuestro territorio inicial antes de la llegada de las petroleras y los colonos."
     }
   ],
-  "pitch": 0,
-  "bearing": 0
+  "minLon": -75.3,
+  "layerOpacity": [
+    {
+      "value": "mapbox-terrain-rgb",
+      "label": "mapbox-terrain-rgb"
+    },
+    {
+      "value": "ne-10m-land-ai2i9o",
+      "label": "ne-10m-land-ai2i9o"
+    },
+    {
+      "value": "Kofan Ancestral Territory",
+      "label": "Kofan Ancestral Territory"
+    },
+    {
+      "value": "Siangoe area copy 1",
+      "label": "Siangoe area copy 1"
+    },
+    {
+      "value": "bfrizzelle-major-rivers-4tu0hm",
+      "label": "bfrizzelle-major-rivers-4tu0hm"
+    },
+    {
+      "value": "Kofan Ancestral Territory Limite",
+      "label": "Kofan Ancestral Territory Limite"
+    },
+    {
+      "value": "raisg-petroleo-6nxnx1",
+      "label": "raisg-petroleo-6nxnx1"
+    },
+    {
+      "value": "raisg-petroleo-6nxnx1 copy",
+      "label": "raisg-petroleo-6nxnx1 copy"
+    },
+    {
+      "value": "mineria-1m3mqz copy 1",
+      "label": "mineria-1m3mqz copy 1"
+    },
+    {
+      "value": "cofan-cxd4gv",
+      "label": "cofan-cxd4gv"
+    },
+    {
+      "value": "Carreteras copy",
+      "label": "Carreteras copy"
+    },
+    {
+      "value": "Carreteras",
+      "label": "Carreteras"
+    },
+    {
+      "value": "ec-an-pozos-petroleros-2018-2gj17h",
+      "label": "ec-an-pozos-petroleros-2018-2gj17h"
+    },
+    {
+      "value": "Ciudades etiqueta",
+      "label": "Ciudades etiqueta"
+    },
+    {
+      "value": "Ciudades etiqueta copy",
+      "label": "Ciudades etiqueta copy"
+    },
+    {
+      "value": "cofan-cxd4gv copy",
+      "label": "cofan-cxd4gv copy"
+    },
+    {
+      "value": "ec-kofan-ancestral-territory-2fe9fl copy 2",
+      "label": "ec-kofan-ancestral-territory-2fe9fl copy 2"
+    }
+  ],
+  "id": "wildlife",
+  "maxLat": -0.66
 }
