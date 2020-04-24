@@ -21,7 +21,7 @@ collections:
         fields: 
           - label: mapbox
             name: mapbox 
-            widget: mapbox
+            widget: string
       - name: sections 
         label: Section Order
         file: _data/settings/order.json

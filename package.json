@@ -11,7 +11,8 @@
     "build:sw": "workbox injectManifest && bin/inject-cache-warmer",
     "build:js": "npm run build:map && npm run build:admin",
     "build:admin": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js",
-    "build:map": "NODE_ENV=production browserify --debug -t [ sheetify/transform -u sheetify-nested ] -p [ css-extract -o dist/bundle.css ] -g unassertify -g envify -t yo-yoify -t babelify -p common-shakeify -p browser-pack-flat/plugin src/index.js | terser --source-map 'content=inline' -c comparisons=false -m -o dist/bundle.js",
+    "build:map": "NODE_ENV=production browserify --debug -t [ sheetify/transform -u sheetify-nested ] -p [ css-extract -o dist/bundle.css ] -g unassertify -g envify -t yo-yoify -t babelify src/index.js > dist/bundle.js",
+    "build:minify": "| terser --source-map 'content=inline' -c comparisons=false -m -o dist/bundle.js",
     "build:static": "copyup 'static/**/*' dist && bin/ssr",
     "start:map": "budo src/index.js:bundle.js -d static -- -t [ sheetify/transform -u sheetify-nested]",
     "start:admin": "webpack-dev-server --config build/webpack.dev.js",
@@ -34,6 +35,7 @@
   "dependencies": {
     "@digidem/attribution-control": "^1.0.0",
     "@karissa/file-relation": "^0.7.0",
+    "@mapbox/mapbox-sdk": "^0.10.0",
     "@ncwidgets/id": "^0.7.0",
     "@ncwidgets/reorder": "^0.7.0",
     "@vimeo/player": "^2.6.1",
