@@ -16,24 +16,12 @@
   "minLon": -75.3,
   "layerOpacity": [
     {
-      "value": "mapbox-terrain-rgb",
-      "label": "mapbox-terrain-rgb"
-    },
-    {
       "value": "ne-10m-land-ai2i9o",
       "label": "ne-10m-land-ai2i9o"
     },
     {
       "value": "Kofan Ancestral Territory",
       "label": "Kofan Ancestral Territory"
-    },
-    {
-      "value": "Siangoe area copy 1",
-      "label": "Siangoe area copy 1"
-    },
-    {
-      "value": "bfrizzelle-major-rivers-4tu0hm",
-      "label": "bfrizzelle-major-rivers-4tu0hm"
     },
     {
       "value": "Kofan Ancestral Territory Limite",
