@@ -88,32 +88,7 @@ module.exports = function () {
     duration: 0
   })
 
-  const bingSource = {
-    type: 'raster',
-    tiles: [
-      'https://ecn.t0.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=5869',
-      'https://ecn.t1.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=5869',
-      'https://ecn.t2.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=5869',
-      'https://ecn.t3.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=5869'
-    ],
-    minzoom: 1,
-    maxzoom: 8,
-    tileSize: 256
-  }
-
-  const bing = {
-    id: 'bing-satellite',
-    type: 'raster',
-    source: 'bing',
-    layout: {
-    },
-    paint: {
-    }
-  }
-
   map.once('styledata', function () {
-    map.addSource('bing', bingSource)
-    // map.addLayer(bing, 'territory-outline') // TODO: fix
     map.setLayoutProperty('background', 'visibility', 'none')
     map.setPaintProperty('background', 'background-opacity', 0)
   })
