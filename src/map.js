@@ -63,7 +63,8 @@ module.exports = function () {
     container: 'map',
     center: defaultCenter,
     zoom: 6,
-    style: content.style,
+    // TODO: URL.parse the style URL to correctly add query params
+    style: content.style + '?fresh=true&optimize=true',
     hash: false,
     zoomControl: false,
     attributionControl: false,
