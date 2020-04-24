@@ -1,8 +1,6 @@
 {
-  "title": {
-    "es": "Sinangoe: nuestra comunidad A’I Cofán en defensa de nuestro territorio ancestral",
-    "en": "english"
-  },
+  "title": "Sinangoe: nuestra comunidad A’I Cofán en defensa de nuestro territorio ancestral",
+  "title_en": "english",
   "bounds": "[-91.62, -11.56, -53.73, 13.78]",
   "minLat": -91.62,
   "maxLat": -11.56,

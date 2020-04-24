@@ -269,7 +269,12 @@ module.exports = function (lang, _map) {
 
   function sidebar () {
     var allSections = content.sections.map((section) => {
-      var autoScroll = mapView(section.id, html`<h1>${message(section.title)}</h1>`, onenter, onexit)
+      var autoScroll = mapView(section.id, html`<h1>${message({
+        // this is a hack b/c
+        // netlify doesnt allow titles to be objects
+        es: section.title,
+        en: section.title_en
+      })}</h1>`, onenter, onexit)
       var contents = section.content.map((item) => {
         switch (item.type) {
           case 'video':

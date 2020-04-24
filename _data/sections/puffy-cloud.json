@@ -3,10 +3,8 @@
   "maxLon": 0.218259,
   "minLat": -77.650422,
   "bearing": 105,
-  "title": {
-    "en": "Section 1",
-    "es": "Nuestro Territorio es Nuestro Vida"
-  },
+  "title": "Nuestro Territorio es Nuestro Vida",
+  "title_en": "Section 1",
   "content": [
     {
       "type": "text",

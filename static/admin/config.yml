@@ -31,14 +31,14 @@ collections:
             widget: ncw-reorder
             collection: sections 
             id_field: id 
-            display_template: '{{id}} | {{title.es}}'
+            display_template: '{{title}}'
 
   - name: sections
     label: Map Sections
     folder: _data/sections
     editor: 
       preview: false
-    summary: "{{title.es}}"
+    summary: "{{title}}"
     create: true
     slug: "{{id}}"
     extension: 'json'
@@ -47,12 +47,12 @@ collections:
         name: id
         prefix: section
         widget: ncw-id
-      - label: Title
+      - label: Titulo (ES)
         name: title
-        widget: object
-        fields:
-          - {label: ES, name: es, widget: string}
-          - {label: EN, name: en, widget: string, required: false}
+        widget: string
+      - label: Title (EN)
+        name: title_en
+        widget: string
       - label: Visible Map Layers
         name: layerOpacity
         widget: mapbox-layer-picker

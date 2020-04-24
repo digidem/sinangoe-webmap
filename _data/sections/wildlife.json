@@ -1,9 +1,7 @@
 {
   "id": "wildlife",
-  "title": {
-    "es": "Un territorio dividido y colonizado",
-    "en": ""
-  },
+  "title_en": "",
+  "title": "Un territorio dividido y colonizado",
   "layerOpacity": [
     {
       "value": "mapbox-terrain-rgb",
