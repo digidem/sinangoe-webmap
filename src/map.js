@@ -88,11 +88,6 @@ module.exports = function () {
     duration: 0
   })
 
-  map.once('styledata', function () {
-    map.setLayoutProperty('background', 'visibility', 'none')
-    map.setPaintProperty('background', 'background-opacity', 0)
-  })
-
   map.once('load', function () {
     document.body.style['background-image'] = 'none'
   })
