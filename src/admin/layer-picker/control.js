@@ -113,7 +113,7 @@ function getMapboxStyle (styleURL, cb) {
   var parts = url.parse(styleURL).pathname.split('/')
   var styleId = parts[parts.length - 1]
 
-  client.getStyle({styleId})
+  client.getStyle({styleId, fresh: true})
     .send()
     .then((resp) => {
       const style = resp.body

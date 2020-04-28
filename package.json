@@ -34,7 +34,7 @@
   "dependencies": {
     "@digidem/attribution-control": "^1.0.0",
     "@karissa/file-relation": "^0.7.0",
-    "@mapbox/mapbox-sdk": "^0.10.0",
+    "@mapbox/mapbox-sdk": "github:okdistribute/mapbox-sdk-js",
     "@ncwidgets/id": "^0.7.0",
     "@ncwidgets/reorder": "^0.7.0",
     "@vimeo/player": "^2.6.1",
