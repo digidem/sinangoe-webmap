@@ -43,6 +43,10 @@
     {
       "value": "mapbox-satellite",
       "label": "mapbox-satellite"
+    },
+    {
+      "value": "Kofan Ancestral Territory",
+      "label": "Kofan Ancestral Territory"
     }
   ],
   "id": "start",
