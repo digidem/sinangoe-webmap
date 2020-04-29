@@ -26,7 +26,6 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
 
   getMapboxStyle(mapboxStyleURL, (err, style) => {
     if (err) throw new Error('Erorr when fetching Mapbox style', err)
-    var allLayers = style.layers.map((layer) => layer.id)
 
     fs.readdir(SECTION_FILES, function (err, files) {
       if (err) throw err
@@ -46,27 +45,18 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
 
         var id = section.id
 
-        // initialize all layers to 0 at first
+        // for those identified in cms, make visible
         var layers = {}
-        allLayers.forEach((layer) => {
-          layers[layer] = 0
-        })
-
-        // for those identified in cms, make opacity 1
-        // TODO: allow custom opacity instead of binary
         section.layerOpacity.map((layer) => {
           layers[layer.value] = 1
         })
-        var bounds = [
-          section.minLat,
-          section.maxLat,
-          section.minLon,
-          section.maxLon
-        ]
 
         map_views[id] = {
-          bounds: bounds,
-          layerOpacity: layers,
+          minLat: section.minLat,
+          maxLat: section.maxLat,
+          minLon: section.minLon,
+          maxLon: section.maxLon,
+          layers: layers,
           pitch: section.pitch,
           bearing: section.bearing
         }
