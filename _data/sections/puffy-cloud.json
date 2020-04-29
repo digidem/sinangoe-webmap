@@ -177,6 +177,10 @@
     {
       "value": "bfrizzelle-major-rivers",
       "label": "bfrizzelle-major-rivers"
+    },
+    {
+      "value": "deforestation",
+      "label": "deforestation"
     }
   ],
   "id": "puff",
