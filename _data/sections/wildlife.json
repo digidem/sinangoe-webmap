@@ -20,56 +20,64 @@
       "label": "ne-10m-land-ai2i9o"
     },
     {
-      "value": "Kofan Ancestral Territory",
-      "label": "Kofan Ancestral Territory"
+      "value": "deforestation",
+      "label": "deforestation"
+    },
+    {
+      "value": "Petrol areas",
+      "label": "Petrol areas"
+    },
+    {
+      "value": "Mining areas",
+      "label": "Mining areas"
+    },
+    {
+      "value": "bfrizzelle-major-rivers",
+      "label": "bfrizzelle-major-rivers"
     },
     {
       "value": "Kofan Ancestral Territory Limite",
       "label": "Kofan Ancestral Territory Limite"
     },
     {
-      "value": "raisg-petroleo-6nxnx1",
-      "label": "raisg-petroleo-6nxnx1"
+      "value": "Fronteras Internationales dark",
+      "label": "Fronteras Internationales dark"
     },
     {
-      "value": "raisg-petroleo-6nxnx1 copy",
-      "label": "raisg-petroleo-6nxnx1 copy"
+      "value": "Petrol lines",
+      "label": "Petrol lines"
     },
     {
-      "value": "mineria-1m3mqz copy 1",
-      "label": "mineria-1m3mqz copy 1"
-    },
-    {
-      "value": "cofan-cxd4gv",
-      "label": "cofan-cxd4gv"
-    },
-    {
-      "value": "Carreteras copy",
-      "label": "Carreteras copy"
+      "value": "Carreteras outline",
+      "label": "Carreteras outline"
     },
     {
       "value": "Carreteras",
       "label": "Carreteras"
     },
     {
-      "value": "ec-an-pozos-petroleros-2018-2gj17h",
-      "label": "ec-an-pozos-petroleros-2018-2gj17h"
+      "value": "Towns",
+      "label": "Towns"
     },
     {
-      "value": "Ciudades etiqueta",
-      "label": "Ciudades etiqueta"
+      "value": "Oil Platforms",
+      "label": "Oil Platforms"
     },
     {
-      "value": "Ciudades etiqueta copy",
-      "label": "Ciudades etiqueta copy"
+      "value": "Town labels",
+      "label": "Town labels"
     },
     {
-      "value": "cofan-cxd4gv copy",
-      "label": "cofan-cxd4gv copy"
+      "value": "Ancestral Territory Label",
+      "label": "Ancestral Territory Label"
     },
     {
-      "value": "ec-kofan-ancestral-territory-2fe9fl copy 2",
-      "label": "ec-kofan-ancestral-territory-2fe9fl copy 2"
+      "value": "Cofan Community Labels",
+      "label": "Cofan Community Labels"
+    },
+    {
+      "value": "Sinangoe label dark copy",
+      "label": "Sinangoe label dark copy"
     }
   ],
   "id": "wildlife",
