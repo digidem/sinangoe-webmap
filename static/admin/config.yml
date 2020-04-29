@@ -66,18 +66,22 @@ collections:
         name: minLat
         widget: number
         valueType: float
+        pattern: ['^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -90 and 90']
       - label: Max Lat
         name: maxLat
         widget: number
         valueType: float
+        pattern: ['^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -90 and 90']
       - label: Min Lon
         name: minLon
         widget: number
         valueType: float
+        pattern: ['^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -180 and 180']
       - label: Max Lon
         name: maxLon
         widget: number
         valueType: float
+        pattern: ['^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -180 and 180']
       - label: Pitch
         name: pitch
         widget: number
