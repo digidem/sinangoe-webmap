@@ -155,31 +155,17 @@ function mapTransition (viewId, map, fitBoundsOptions) {
 function setLayerOpacity (map, layerId, visible, duration) {
   if (typeof duration === 'undefined') duration = FADEIN_DURATION
   var layer = map.getLayer(layerId)
-  var props = getOpacityProps(layer)
-  props.forEach(function ({name, opacity}) {
-    map.setPaintProperty(layerId, name, visible === 0 ? 0 : opacity)
+  if (!layer) return console.error('no layer', layerId)
+  var props = getOpacityPropNames(layer)
+  props.forEach(function (name) {
+    map.setPaintProperty(layerId, name, visible)
   })
 }
 
-function getOpacityProps (layer) {
-  var props = []
-  if (layer.type !== 'symbol') {
-    return [{
-      name: layer.type + '-opacity',
-      value: layer.getLayoutProperty(layer.type + '-opacity')
-    }]
-  }
-  let opacity = layer.getLayoutProperty('icon-image')
-  if (opacity) {
-    props.push({
-      name: 'icon-opacity', opacity
-    })
-  }
-  let textOpacity = layer.getLayoutProperty('text-field')
-  if (textOpacity) {
-    props.push({
-      name: 'text-opacity', opacity: textOpacity
-    })
-  }
-  return props
+function getOpacityPropNames (layer) {
+  if (layer.type !== 'symbol') return [layer.type + '-opacity']
+  var propNames = []
+  if (layer.getLayoutProperty('icon-image')) propNames.push('icon-opacity')
+  if (layer.getLayoutProperty('text-field')) propNames.push('text-opacity')
+  return propNames
 }
