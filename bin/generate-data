@@ -7,12 +7,15 @@ var Mapbox = require('@mapbox/mapbox-sdk/services/styles')
 var map_views = {}
 var sections = []
 
+var ORDER_FILE = path.join(__dirname, '../_data/settings/order.json')
 var MAPBOX_FILE = path.join(__dirname, '../_data/settings/mapbox.json')
 var SECTION_FILES = path.join(__dirname, '../_data/sections')
 var OUTPUT_FILE = path.join(__dirname, '..', '_data', 'data.json')
 
 var ACCESS_TOKEN = require('../mapbox-config.js').accessToken
 var client = new Mapbox({ accessToken: ACCESS_TOKEN })
+
+var order = JSON.parse(fs.readFileSync(ORDER_FILE).toString()).order
 
 fs.readFile(MAPBOX_FILE, function (err, data) {
   if (err) throw err
@@ -32,8 +35,7 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
 
         var section = JSON.parse(contents)
 
-        var id = filename.replace('.json', '')
-        section.id = id
+        var id = section.id
 
         // initialize all layers to 0 at first
         var layers = {}
@@ -66,6 +68,12 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
         delete section.bearing
         sections.push(section)
       })
+
+      sections.sort((a, b) => {
+        console.log(order.indexOf(a.id), order.indexOf(b.id))
+        return order.indexOf(a.id) > order.indexOf(b.id)
+      })
+      console.log(sections)
 
       fs.writeFileSync(
         OUTPUT_FILE,
