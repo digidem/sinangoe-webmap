@@ -36,7 +36,9 @@ var HIDDEN_TRANSITION_LAYERS = [
 ]
 
 var timeoutId
-var hiddenLayersExpanded
+
+// TODO: expand layers programmatically
+var hiddenLayersExpanded = []
 var loaded = false
 var events = new EventEmitter()
 
@@ -65,8 +67,6 @@ function mapTransition (viewId, map, fitBoundsOptions) {
     return
   }
 
-  if (!hiddenLayersExpanded) expandLayerGlobs(map)
-
   fadeoutLayers()
   debug(viewId + ':', 'fadeout layers')
   timeoutId = setTimeout(function () {
@@ -78,11 +78,11 @@ function mapTransition (viewId, map, fitBoundsOptions) {
   map.once('moveend', showOverlays)
 
   function showOverlays () {
-    Object.keys(view.layerOpacity).forEach(function (layerId) {
+    Object.keys(view.layers).forEach(function (layerId) {
       if (!map.getLayer(layerId)) return debug('no layer', layerId)
       var currentVisibility = map.getLayoutProperty(layerId, 'visibility')
-      var targetOpacity = view.layerOpacity[layerId]
-      if (currentVisibility === 'none' && targetOpacity > 0) {
+      var targetVisibility = view.layers[layerId]
+      if (currentVisibility === 'none' && targetVisibility > 0) {
         setLayerOpacity(map, layerId, 0, 0)
         map.setLayoutProperty(layerId, 'visibility', 'visible')
       }
@@ -111,8 +111,8 @@ function mapTransition (viewId, map, fitBoundsOptions) {
       setLayerOpacity(map, layerId, 0, FADEOUT_DURATION)
     })
     // Fadeout layers that do not appear in the target view
-    Object.keys(view.layerOpacity).forEach(function (layerId) {
-      if (view.layerOpacity[layerId] > 0) return
+    Object.keys(view.layers).forEach(function (layerId) {
+      if (view.layers[layerId] > 0) return
       // debug('fadeout', layerId)
       setLayerOpacity(map, layerId, 0, FADEOUT_DURATION)
     })
@@ -120,24 +120,20 @@ function mapTransition (viewId, map, fitBoundsOptions) {
 
   function fadeinLayers () {
     // Fadein layers in target view
-    Object.keys(view.layerOpacity).forEach(function (layerId) {
+    Object.keys(view.layers).forEach(function (layerId) {
       debug(viewId + ': fadein', layerId)
-      setLayerOpacity(map, layerId, view.layerOpacity[layerId], FADEIN_DURATION)
+      setLayerOpacity(map, layerId, view.layers[layerId], FADEIN_DURATION)
     })
   }
 
   function moveMap () {
+    var bounds = [
+      [view.minLon, view.minLat],
+      [view.maxLon, view.maxLat]
+    ]
+    map.fitBounds(bounds, fitBoundsOptions)
     map.setPitch(view.pitch || 0)
     map.setBearing(view.bearing || 0)
-    if (view.bounds) {
-      map.fitBounds(view.bounds, fitBoundsOptions)
-    } else {
-      map.flyTo(Object.assign({
-        center: view.center,
-        zoom: view.zoom,
-        speed: FLY_SPEED
-      }, fitBoundsOptions))
-    }
   }
 
   function hideOverlays () {
@@ -156,34 +152,13 @@ function mapTransition (viewId, map, fitBoundsOptions) {
   }
 }
 
-function setLayerOpacity (map, layerId, opacity, duration) {
+function setLayerOpacity (map, layerId, visible, duration) {
   if (typeof duration === 'undefined') duration = FADEIN_DURATION
   var layer = map.getLayer(layerId)
-  var propNames = getOpacityPropNames(layer)
-  // Workaround for https://github.com/mapbox/mapbox-gl-js/issues/6706
-  // Need to call `setPaintProperty()` on the layer, not `map`
-  propNames.forEach(function (propName) {
-    // TODO: are these always guaranteed to be in the map?
-    // layer.setPaintProperty(propName + '-transition', {duration: duration, delay: 0})
-    // map.setPaintProperty(layerId, propName, opacity)
-  })
-}
-
-function expandLayerGlobs (map) {
-  var mapLayers = map.getStyle().layers.map(function (l) {
-    return l.id
-  })
-  hiddenLayersExpanded = mm(mapLayers, HIDDEN_TRANSITION_LAYERS)
-  Object.keys(views).forEach(function (key) {
-    var expandedLayerOpacity = {}
-    var layerMatchPatterns = Object.keys(views[key].layerOpacity)
-    layerMatchPatterns.forEach(function (pattern) {
-      var matchedLayers = mm(mapLayers, [pattern])
-      matchedLayers.forEach(function (layerId) {
-        expandedLayerOpacity[layerId] = views[key].layerOpacity[pattern]
-      })
-    })
-    views[key].layerOpacity = expandedLayerOpacity
+  if (!layer) return console.error('no layer', layerId)
+  var props = getOpacityPropNames(layer)
+  props.forEach(function (name) {
+    map.setPaintProperty(layerId, name, visible)
   })
 }
 
@@ -194,4 +169,3 @@ function getOpacityPropNames (layer) {
   if (layer.getLayoutProperty('text-field')) propNames.push('text-opacity')
   return propNames
 }
-
