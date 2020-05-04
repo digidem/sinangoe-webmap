@@ -3,7 +3,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 # publish_mode: editorial_workflow
-site_url: https://stupefied-meitner-092e19.netlify.app/
+  site_url: https://sinangoe-map.ddem.us
 
 local_backend: true
 
