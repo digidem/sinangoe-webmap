@@ -4,17 +4,6 @@ if (process.env.NODE_ENV !== 'production') {
   debug = require('debug')('mapa-waorani:prefetch')
 }
 
-function mm (list, patterns) {
-  var regexps = patterns.map(function (p) {
-    return new RegExp(p.replace('*', '.*'))
-  })
-  return list.filter(function (str) {
-    return regexps.some(function (regexp) {
-      return regexp.exec(str)
-    })
-  })
-}
-
 var content = require('../_data/data.json')
 var views = content.map_views
 
@@ -67,6 +56,8 @@ function mapTransition (viewId, map, fitBoundsOptions) {
     return
   }
 
+  if (!hiddenLayersExpanded) expandLayerGlobs(map)
+
   fadeoutLayers()
   debug(viewId + ':', 'fadeout layers')
   timeoutId = setTimeout(function () {
@@ -110,11 +101,14 @@ function mapTransition (viewId, map, fitBoundsOptions) {
       if (!map.getLayer(layerId)) return console.warn('no layer', layerId)
       setLayerOpacity(map, layerId, 0, FADEOUT_DURATION)
     })
+
+    // TODO: Use opacity from mapbox?
     // Fadeout layers that do not appear in the target view
-    Object.keys(view.layers).forEach(function (layerId) {
-      if (view.layers[layerId] > 0) return
+    Object.keys(map.style._layers).forEach(function (layerName) {
+      var layer = map.style._layers[layerName]
+      if (view.layers[layer.id] > 0) return
       // debug('fadeout', layerId)
-      setLayerOpacity(map, layerId, 0, FADEOUT_DURATION)
+      setLayerOpacity(map, layer.id, 0, FADEOUT_DURATION)
     })
   }
 
@@ -158,7 +152,38 @@ function setLayerOpacity (map, layerId, visible, duration) {
   if (!layer) return console.error('no layer', layerId)
   var props = getOpacityPropNames(layer)
   props.forEach(function (name) {
-    map.setPaintProperty(layerId, name, visible)
+    var opacity = visible
+    if (visible) {
+      // Fetch opacith from mapbox layer
+      try {
+        // This is super hacky, there must be a better way
+        // Not even sure this works for all cases...
+        var defaultValues = layer.paint._properties.defaultPropertyValues[name]
+        opacity = visible ? defaultValues.property.specification.default : 0
+      } catch (err) {
+        console.error('Failed to fetch default opacity value from layer, using 1')
+        console.error(err)
+      }
+    }
+    map.setPaintProperty(layerId, name, opacity)
+  })
+}
+
+function expandLayerGlobs (map) {
+  var mapLayers = map.getStyle().layers.map(function (l) {
+    return l.id
+  })
+  hiddenLayersExpanded = mm(mapLayers, HIDDEN_TRANSITION_LAYERS)
+  Object.keys(views).forEach(function (key) {
+    var expandedLayerOpacity = {}
+    var layerMatchPatterns = Object.keys(views[key].layerOpacity)
+    layerMatchPatterns.forEach(function (pattern) {
+      var matchedLayers = mm(mapLayers, [pattern])
+      matchedLayers.forEach(function (layerId) {
+        expandedLayerOpacity[layerId] = views[key].layerOpacity[pattern]
+      })
+    })
+    views[key].layerOpacity = expandedLayerOpacity
   })
 }
 
@@ -168,4 +193,15 @@ function getOpacityPropNames (layer) {
   if (layer.getLayoutProperty('icon-image')) propNames.push('icon-opacity')
   if (layer.getLayoutProperty('text-field')) propNames.push('text-opacity')
   return propNames
+}
+
+function mm (list, patterns) {
+  var regexps = patterns.map(function (p) {
+    return new RegExp(p.replace('*', '.*'))
+  })
+  return list.filter(function (str) {
+    return regexps.some(function (regexp) {
+      return regexp.exec(str)
+    })
+  })
 }
