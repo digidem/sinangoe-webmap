@@ -15,14 +15,19 @@ var OUTPUT_FILE = path.join(__dirname, '..', '_data', 'data.json')
 var ACCESS_TOKEN = require('../mapbox-config.js').accessToken
 var client = new Mapbox({ accessToken: ACCESS_TOKEN })
 
-var order = JSON.parse(fs.readFileSync(ORDER_FILE).toString()).order
-
 fs.readFile(MAPBOX_FILE, function (err, data) {
   if (err) throw err
-  var mapbox = JSON.parse(data.toString()).mapbox
-  getMapboxStyle(mapbox, (err, style) => {
-    if (err) throw err
+
+  try {
+    var mapboxStyleURL = JSON.parse(data.toString()).mapbox
+  } catch (err) {
+    throw new Error('Mapbox Style URL incorrect', err)
+  }
+
+  getMapboxStyle(mapboxStyleURL, (err, style) => {
+    if (err) throw new Error('Erorr when fetching Mapbox style', err)
     var allLayers = style.layers.map((layer) => layer.id)
+
     fs.readdir(SECTION_FILES, function (err, files) {
       if (err) throw err
       files.forEach((filename) => {
@@ -33,7 +38,11 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
         // replace '/static/.' urls with / for production use
         contents = contents.replace(/\/static/g, '')
 
-        var section = JSON.parse(contents)
+        try {
+          var section = JSON.parse(contents)
+        } catch (err) {
+          throw new Error(`Unable to parse section with filename ${filename}`, err)
+        }
 
         var id = section.id
 
@@ -69,20 +78,23 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
         sections.push(section)
       })
 
-      sections.sort((a, b) => {
-        console.log(order.indexOf(a.id), order.indexOf(b.id))
-        return order.indexOf(a.id) > order.indexOf(b.id)
+      try {
+        var order = JSON.parse(fs.readFileSync(ORDER_FILE).toString()).order
+      } catch (err) {
+        throw new Error(`Parse error in ${ORDER_FILE}.`, err)
+      }
+
+      sections = sections.sort((a, b) => {
+        return order.indexOf(a.id) - order.indexOf(b.id)
       })
-      console.log(sections)
 
       fs.writeFileSync(
         OUTPUT_FILE,
-        JSON.stringify({ style: mapbox, sections, map_views }, null, 2)
+        JSON.stringify({ style: mapboxStyleURL, sections, map_views }, null, 2)
       )
     })
   })
 })
-
 
 function getMapboxStyle (styleURL, cb) {
   var styleId = path.parse(styleURL).base
