@@ -1,10 +1,11 @@
 {
   "pitch": 0,
-  "maxLon": 0.62,
-  "minLat": -77.74,
+  "maxLon": -75.3,
+  "minLat": -0.66,
+  "maxLat": 0.62,
+  "minLon": -77.74,
   "bearing": 0,
   "title_en": "A territory divided and colonized",
-  "bounds": " [-77.74, -0.66, -75.3, 0.62]",
   "title": "Un territorio dividido y colonizado",
   "content": [
     {
@@ -13,7 +14,6 @@
       "es": "Nuestro gran territorio A’I Cofán fue el primer impactado por la llegada de las petroleras en la Amazonía ecuatoriana hace 50 años. Carreteras, plataformas, oleoductos, pozos y colonización han provocado desplazamiento y una disminución drástica de nuestro territorio A’I Cofán. Actualmente, las comunidades viven en “islas de selva” rodeadas de un mar de deforestación. 50 años después de la primera perforación, los A’I Cofán del Ecuador ocupamos menos de XX hectáreas, o YY% de nuestro territorio inicial antes de la llegada de las petroleras y los colonos."
     }
   ],
-  "minLon": -75.3,
   "layerOpacity": [
     {
       "value": "ne-10m-land-ai2i9o",
@@ -80,6 +80,5 @@
       "label": "Sinangoe label dark copy"
     }
   ],
-  "id": "wildlife",
-  "maxLat": -0.66
+  "id": "wildlife"
 }
