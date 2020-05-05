@@ -14,14 +14,6 @@ var FLY_SPEED = 0.5
 // These layers are complex to draw (calculating collisions) so we always
 // hide them when transitioning between map views to avoid animation jitter
 var HIDDEN_TRANSITION_LAYERS = [
-  'rivers-large-*', // wao-scale river shadows
-  'rivers-peru-ecuador-colo-*', // country-scale river shadows
-  'rivers-area-peru-ecuador-colo-*', // river areas shadows
-  'plant-view*',
-  'final-*',
-  'wildlife-view-*',
-  'territory-points-*',
-  'rivers-label-*'
 ]
 
 var timeoutId
@@ -104,11 +96,10 @@ function mapTransition (viewId, map, fitBoundsOptions) {
 
     // TODO: Use opacity from mapbox?
     // Fadeout layers that do not appear in the target view
-    Object.keys(map.style._layers).forEach(function (layerName) {
-      var layer = map.style._layers[layerName]
-      if (view.layers[layer.id] > 0) return
+    Object.keys(map.style._layers).forEach(function (layerId) {
+      if (view.layers[layerId] > 0) return
       // debug('fadeout', layerId)
-      setLayerOpacity(map, layer.id, 0, FADEOUT_DURATION)
+      setLayerOpacity(map, layerId, 0, FADEOUT_DURATION)
     })
   }
 
