@@ -78,7 +78,12 @@ module.exports = function () {
   var sidebar = document.getElementById('sidebar')
   var sidebarWidth = sidebar ? sidebar.clientWidth : 500
 
-  map.fitBounds(content.map_views[firstId].bounds, {
+  var view = content.map_views[firstId]
+  var bounds = [
+    [view.minLon, view.minLat],
+    [view.maxLon, view.maxLat]
+  ]
+  map.fitBounds(bounds, {
     padding: {
       top: 0,
       right: 0,
