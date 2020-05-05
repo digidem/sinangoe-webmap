@@ -116,11 +116,10 @@ function mapTransition (viewId, map, fitBoundsOptions) {
       [view.minLon, view.minLat],
       [view.maxLon, view.maxLat]
     ]
-    map.fitBounds(bounds, {
-      ...fitBoundsOptions,
+    map.fitBounds(bounds, Object.assign(fitBoundsOptions, {
       pitch: view.pitch || 0,
       bearing: view.bearing || 0
-    })
+    }))
   }
 
   function hideOverlays () {
