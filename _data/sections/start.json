@@ -1,9 +1,10 @@
 {
   "pitch": 0,
-  "maxLat": 13.78,
-  "minLon": -91.62,
+  "maxLon": 13.78,
+  "minLat": -91.62,
   "bearing": 0,
   "title_en": "english",
+  "bounds": "[-91.62, -11.56, -53.73, 13.78]",
   "title": "Sinangoe: nuestra comunidad A’I Cofán en defensa de nuestro territorio ancestral",
   "content": [
     {
@@ -13,7 +14,7 @@
       "en": "sdfsdf"
     }
   ],
-  "minLat": -53.73,
+  "minLon": -53.73,
   "layerOpacity": [
     {
       "value": "Frontera internacional",
@@ -49,5 +50,5 @@
     }
   ],
   "id": "start",
-  "maxLon": -11.56
+  "maxLat": -11.56
 }

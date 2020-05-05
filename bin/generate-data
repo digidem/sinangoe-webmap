@@ -7,7 +7,6 @@ var Mapbox = require('@mapbox/mapbox-sdk/services/styles')
 var map_views = {}
 var sections = []
 
-var ORDER_FILE = path.join(__dirname, '../_data/settings/order.json')
 var MAPBOX_FILE = path.join(__dirname, '../_data/settings/mapbox.json')
 var SECTION_FILES = path.join(__dirname, '../_data/sections')
 var OUTPUT_FILE = path.join(__dirname, '..', '_data', 'data.json')
@@ -17,16 +16,10 @@ var client = new Mapbox({ accessToken: ACCESS_TOKEN })
 
 fs.readFile(MAPBOX_FILE, function (err, data) {
   if (err) throw err
-
-  try {
-    var mapboxStyleURL = JSON.parse(data.toString()).mapbox
-  } catch (err) {
-    throw new Error('Mapbox Style URL incorrect', err)
-  }
-
-  getMapboxStyle(mapboxStyleURL, (err, style) => {
-    if (err) throw new Error('Erorr when fetching Mapbox style', err)
-
+  var mapbox = JSON.parse(data.toString()).mapbox
+  getMapboxStyle(mapbox, (err, style) => {
+    if (err) throw err
+    var allLayers = style.layers.map((layer) => layer.id)
     fs.readdir(SECTION_FILES, function (err, files) {
       if (err) throw err
       files.forEach((filename) => {
@@ -37,26 +30,32 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
         // replace '/static/.' urls with / for production use
         contents = contents.replace(/\/static/g, '')
 
-        try {
-          var section = JSON.parse(contents)
-        } catch (err) {
-          throw new Error(`Unable to parse section with filename ${filename}`, err)
-        }
+        var section = JSON.parse(contents)
 
-        var id = section.id
+        var id = filename.replace('.json', '')
+        section.id = id
 
-        // for those identified in cms, make visible
+        // initialize all layers to 0 at first
         var layers = {}
+        allLayers.forEach((layer) => {
+          layers[layer] = 0
+        })
+
+        // for those identified in cms, make opacity 1
+        // TODO: allow custom opacity instead of binary
         section.layerOpacity.map((layer) => {
           layers[layer.value] = 1
         })
+        var bounds = [
+          section.minLat,
+          section.maxLat,
+          section.minLon,
+          section.maxLon
+        ]
 
         map_views[id] = {
-          minLat: section.minLat,
-          maxLat: section.maxLat,
-          minLon: section.minLon,
-          maxLon: section.maxLon,
-          layers: layers,
+          bounds: bounds,
+          layerOpacity: layers,
           pitch: section.pitch,
           bearing: section.bearing
         }
@@ -68,23 +67,14 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
         sections.push(section)
       })
 
-      try {
-        var order = JSON.parse(fs.readFileSync(ORDER_FILE).toString()).order
-      } catch (err) {
-        throw new Error(`Parse error in ${ORDER_FILE}.`, err)
-      }
-
-      sections = sections.sort((a, b) => {
-        return order.indexOf(a.id) - order.indexOf(b.id)
-      })
-
       fs.writeFileSync(
         OUTPUT_FILE,
-        JSON.stringify({ style: mapboxStyleURL, sections, map_views }, null, 2)
+        JSON.stringify({ style: mapbox, sections, map_views }, null, 2)
       )
     })
   })
 })
+
 
 function getMapboxStyle (styleURL, cb) {
   var styleId = path.parse(styleURL).base
