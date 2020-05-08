@@ -1,7 +1,5 @@
 {
   "pitch": 0,
-  "maxLon": 0,
-  "minLat": 0,
   "bearing": 0,
   "title_en": "Indigenous",
   "title": "Guardia indigena: defensores de nuestro territorio y de los derechos A’I Cofán",
@@ -11,7 +9,6 @@
       "es": "Nuestra guardia indígena está formada por 20 jóvenes y mayores elegidos por la comunidad y dedicados a cuidar nuestro territorio. Sus conocimientos del territorio y sus grande habilidades a andar en el monte les permite hacer recorridos semanales que los llevan a cada rincón del territorio en búsqueda de actividades ilegales. Apoyados con herramientas tecnológicas como drones, cartografía digital, y cámaras trampas, nuestras guardias detectan y confrontan mineros, cazadores, pescadores, madereros, y ejercen la defensa de nuestros derechos y nuestra salud."
     }
   ],
-  "minLon": 0,
   "layerOpacity": [
     {
       "value": "background",
@@ -19,5 +16,12 @@
     }
   ],
   "id": "section-VXFJ5xK57",
-  "maxLat": 0
+  "sw": {
+    "lat": 0.149012,
+    "lon": -77.485388
+  },
+  "ne": {
+    "lat": 0.090085,
+    "lon": -77.408688
+  }
 }

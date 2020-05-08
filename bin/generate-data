@@ -52,10 +52,10 @@ fs.readFile(MAPBOX_FILE, function (err, data) {
         })
 
         map_views[id] = {
-          minLat: section.minLat,
-          maxLat: section.maxLat,
-          minLon: section.minLon,
-          maxLon: section.maxLon,
+          minLat: section.sw.lat,
+          minLon: section.sw.lon,
+          maxLat: section.ne.lat,
+          maxLon: section.ne.lon,
           layers: layers,
           pitch: section.pitch,
           bearing: section.bearing

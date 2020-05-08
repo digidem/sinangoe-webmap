@@ -62,26 +62,34 @@ collections:
         id_field: id
         display_fields: id
         multiple: true
-      - label: Min Lat
-        name: minLat
-        widget: number
-        valueType: float
-        pattern: ['^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -90 and 90']
-      - label: Max Lat
-        name: maxLat
-        widget: number
-        valueType: float
-        pattern: ['^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -90 and 90']
-      - label: Min Lon
-        name: minLon
-        widget: number
-        valueType: float
-        pattern: ['^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -180 and 180']
-      - label: Max Lon
-        name: maxLon
-        widget: number
-        valueType: float
-        pattern: ['^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -180 and 180']
+      - label: South-west corner 
+        name: sw
+        widget: object
+        fields: 
+        - label: Longitude
+          name: lon
+          widget: number
+          valueType: float
+          pattern: ['^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -180 and 180']
+        - label: Latitude
+          name: lat
+          widget: number
+          valueType: float
+          pattern: ['^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -90 and 90']
+      - label: North-east corner 
+        name: ne
+        widget: object
+        fields:
+        - label: Longitude
+          name: lon
+          widget: number
+          valueType: float
+          pattern: ['^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -180 and 180']
+        - label: Latitude
+          name: lat
+          widget: number
+          valueType: float
+          pattern: ['^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$', 'Must be between -90 and 90']
       - label: Pitch
         name: pitch
         widget: number
