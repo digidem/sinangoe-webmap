@@ -1,8 +1,16 @@
 {
   "pitch": 0,
+  "sw": {
+    "lat": 0.149012,
+    "lon": -77.485388
+  },
   "bearing": 0,
   "title_en": "Section 1",
-  "title": "Nuestro Territorio es Nuestra Vida",
+  "ne": {
+    "lat": 0.090085,
+    "lon": -77.408688
+  },
+  "title": "1 Nuestro Territorio es Nuestra Vida",
   "content": [
     {
       "type": "text",
@@ -176,13 +184,5 @@
       "label": "deforestation"
     }
   ],
-  "id": "puff",
-  "sw": {
-    "lat": 0.149012,
-    "lon": -77.485388
-  },
-  "ne": {
-    "lat": 0.090085,
-    "lon": -77.408688
-  }
+  "id": "puff"
 }
