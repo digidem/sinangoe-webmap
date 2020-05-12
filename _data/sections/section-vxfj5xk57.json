@@ -1,8 +1,16 @@
 {
   "pitch": 0,
+  "sw": {
+    "lat": 0.149012,
+    "lon": -77.485388
+  },
   "bearing": 0,
   "title_en": "Indigenous",
-  "title": "Guardia indigena: defensores de nuestro territorio y de los derechos A’I Cofán",
+  "ne": {
+    "lat": 0.090085,
+    "lon": -77.408688
+  },
+  "title": "5 Guardia indigena: defensores de nuestro territorio y de los derechos A’I Cofán",
   "content": [
     {
       "type": "text",
@@ -15,13 +23,5 @@
       "label": "background"
     }
   ],
-  "id": "section-VXFJ5xK57",
-  "sw": {
-    "lat": 0.149012,
-    "lon": -77.485388
-  },
-  "ne": {
-    "lat": 0.090085,
-    "lon": -77.408688
-  }
+  "id": "section-VXFJ5xK57"
 }
