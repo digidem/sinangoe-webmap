@@ -3,14 +3,14 @@
   "sw": {
     "lon": -77.74,
     "lat": -0.66
-   },
-   "ne": {
-    "lat": 0.62,
-    "lon": -75.3
-   },
+  },
   "bearing": 0,
   "title_en": "A territory divided and colonized",
-  "title": "Un territorio dividido y colonizado",
+  "ne": {
+    "lat": 0.62,
+    "lon": -75.3
+  },
+  "title": "3 Un territorio dividido y colonizado",
   "content": [
     {
       "type": "text",
