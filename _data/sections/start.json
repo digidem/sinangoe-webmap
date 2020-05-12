@@ -1,7 +1,15 @@
 {
   "pitch": 0,
+  "sw": {
+    "lat": -10.04,
+    "lon": -105.14
+  },
   "bearing": 0,
   "title_en": "english",
+  "ne": {
+    "lat": 22.78,
+    "lon": -56.69
+  },
   "title": "Sinangoe: nuestra comunidad A’I Cofán en defensa de nuestro territorio ancestral",
   "content": [
     {
@@ -45,14 +53,5 @@
       "label": "Kofan Ancestral Territory"
     }
   ],
-  "id": "start",
-  "sw": {
-    "lat": -11.56,
-    "lon": -91.62
-  },
-  "ne": {
-    "lat": 13.78,
-    "lon": -53.73
-  }
-
+  "id": "start"
 }
