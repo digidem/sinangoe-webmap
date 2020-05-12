@@ -1,8 +1,16 @@
 {
   "pitch": 0,
+  "sw": {
+    "lat": 0.149012,
+    "lon": -77.485388
+  },
   "bearing": 0,
   "title_en": "our",
-  "title": "Sinangoe: nuestra comunidad unida para defender su territorio",
+  "ne": {
+    "lat": 0.090085,
+    "lon": -77.408688
+  },
+  "title": "4 Sinangoe: nuestra comunidad unida para defender su territorio",
   "content": [
     {
       "type": "text",
@@ -15,13 +23,5 @@
       "label": "background"
     }
   ],
-  "id": "section-aX5waeCUi",
-  "sw": {
-    "lat": 0.149012,
-    "lon": -77.485388
-  },
-  "ne": {
-    "lat": 0.090085,
-    "lon": -77.408688
-  }
+  "id": "section-aX5waeCUi"
 }
