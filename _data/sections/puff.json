@@ -1,0 +1,188 @@
+{
+  "pitch": 0,
+  "sw": {
+    "lat": 0.149012,
+    "lon": -77.485388
+  },
+  "bearing": 0,
+  "title_en": "Section 1",
+  "ne": {
+    "lat": 0.090085,
+    "lon": -77.408688
+  },
+  "title": "1 Nuestro Territorio es Nuestra Vida",
+  "content": [
+    {
+      "type": "text",
+      "text": "Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.Puffy clouds are important.",
+      "es": "**Nuestro territorio es nuestra vida. Durante los dos últimos años, a través de más de 150 días de recorridos en cada rincón de nuestro territorio ancestral, hemos mapeado nuestra tierra para exigir al gobierno ecuatoriano que nos da reconocimiento de título de propiedad sobre más de 60.000 hectáreas de selva virgen que hemos ocupado por miles de años como pueblo originario. Más de 5000 puntos GPS han sido recolectado por nuestros mapeadores comunitarios. Contándoles nuestra lucha, aquí les presentamos un resumen de este gran trabajo de mapeo para demostrar nuestra ancestralidad, el uso de nuestro territorio y la conexión tan importante que tenemos con nuestra selva.**"
+    }
+  ],
+  "layerOpacity": [
+    {
+      "value": "ne-10m-land-ai2i9o",
+      "label": "ne-10m-land-ai2i9o"
+    },
+    {
+      "value": "background",
+      "label": "background"
+    },
+    {
+      "value": "area-invisibles",
+      "label": "area-invisibles"
+    },
+    {
+      "value": "entierros",
+      "label": "entierros"
+    },
+    {
+      "value": "casa-ancestros",
+      "label": "casa-ancestros"
+    },
+    {
+      "value": "casas",
+      "label": "casas"
+    },
+    {
+      "value": "chacra",
+      "label": "chacra"
+    },
+    {
+      "value": "campamento-cofan",
+      "label": "campamento-cofan"
+    },
+    {
+      "value": "cuento-anestral",
+      "label": "cuento-anestral"
+    },
+    {
+      "value": "cerros-mirador",
+      "label": "cerros-mirador"
+    },
+    {
+      "value": "cueva",
+      "label": "cueva"
+    },
+    {
+      "value": "yoco",
+      "label": "yoco"
+    },
+    {
+      "value": "yage",
+      "label": "yage"
+    },
+    {
+      "value": "semilla-artesania",
+      "label": "semilla-artesania"
+    },
+    {
+      "value": "planta",
+      "label": "planta"
+    },
+    {
+      "value": "palmera",
+      "label": "palmera"
+    },
+    {
+      "value": "moretal",
+      "label": "moretal"
+    },
+    {
+      "value": "liana",
+      "label": "liana"
+    },
+    {
+      "value": "chonta",
+      "label": "chonta"
+    },
+    {
+      "value": "barbasco",
+      "label": "barbasco"
+    },
+    {
+      "value": "arbol",
+      "label": "arbol"
+    },
+    {
+      "value": "playa",
+      "label": "playa"
+    },
+    {
+      "value": "canyon",
+      "label": "canyon"
+    },
+    {
+      "value": "cascadas",
+      "label": "cascadas"
+    },
+    {
+      "value": "animal-extinccion",
+      "label": "animal-extinccion"
+    },
+    {
+      "value": "animal",
+      "label": "animal"
+    },
+    {
+      "value": "armadillo",
+      "label": "armadillo"
+    },
+    {
+      "value": "boa",
+      "label": "boa"
+    },
+    {
+      "value": "ave",
+      "label": "ave"
+    },
+    {
+      "value": "huangana",
+      "label": "huangana"
+    },
+    {
+      "value": "gallo-de-pena",
+      "label": "gallo-de-pena"
+    },
+    {
+      "value": "osoanteojos",
+      "label": "osoanteojos"
+    },
+    {
+      "value": "hormigas",
+      "label": "hormigas"
+    },
+    {
+      "value": "saladero",
+      "label": "saladero"
+    },
+    {
+      "value": "sitio de pesca",
+      "label": "sitio de pesca"
+    },
+    {
+      "value": "Sinangoe Village",
+      "label": "Sinangoe Village"
+    },
+    {
+      "value": "Sinangoe label dark",
+      "label": "Sinangoe label dark"
+    },
+    {
+      "value": "Sinangoe Area",
+      "label": "Sinangoe Area"
+    },
+    {
+      "value": "Small Rivers",
+      "label": "Small Rivers"
+    },
+    {
+      "value": "bfrizzelle-major-rivers",
+      "label": "bfrizzelle-major-rivers"
+    },
+    {
+      "value": "deforestation",
+      "label": "deforestation"
+    }
+  ],
+  "id": "puff"
+}
