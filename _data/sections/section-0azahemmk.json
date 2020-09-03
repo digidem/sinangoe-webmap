@@ -1,0 +1,31 @@
+{
+  "pitch": 0,
+  "sw": {
+    "lon": 0,
+    "lat": 0
+  },
+  "bearing": 0,
+  "title_en": "6. ",
+  "ne": {
+    "lon": 0.5,
+    "lat": 0.5
+  },
+  "title": "6.   Somos guardianes de un refugio mega-diverso y único  ",
+  "content": [
+    {
+      "type": "text",
+      "es": "Nuestro hogar es una de las zonas más biodiversas del mundo. Los biólogos nos dicen que es el hábitat de casi 4000 especies de plantas, más de 50 especies de mamíferos medianos y grandes, 650 especies de aves y más de 100 especies de reptiles y anfibios.\n\nEspecies emblemáticas de nuestra tierra son el tapir de montaña, el mono araña y el oso de anteojo, las tres especies en peligro de extinción. En total, más de 25 especies de mamíferos observados en nuestro territorio están en amenaza de extinción. Así, el rol de nuestras guardias permite defender este refugio megadiverso."
+    }
+  ],
+  "layerOpacity": [
+    {
+      "value": "background",
+      "label": "background"
+    },
+    {
+      "value": "mapbox-satellite",
+      "label": "mapbox-satellite"
+    }
+  ],
+  "id": "section-0AZahEmMK"
+}
