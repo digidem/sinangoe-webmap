@@ -1,0 +1,21 @@
+{
+  "pitch": 0,
+  "bearing": 0,
+  "id": "section-wpGpPNAI2",
+  "title": "Nuevo ",
+  "layerOpacity": [
+    {
+      "value": "background",
+      "label": "background"
+    }
+  ],
+  "sw": {
+    "lon": 1,
+    "lat": 0
+  },
+  "ne": {
+    "lon": 0,
+    "lat": -2
+  },
+  "title_en": "New"
+}
