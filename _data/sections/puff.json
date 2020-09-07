@@ -1,14 +1,14 @@
 {
   "pitch": 0,
   "sw": {
-    "lat": 0.149012,
-    "lon": -77.485388
+    "lat": 0.0964,
+    "lon": -77.545
   },
   "bearing": 0,
   "title_en": "Section 1",
   "ne": {
-    "lat": 0.090085,
-    "lon": -77.408688
+    "lat": 0.173,
+    "lon": -77.42
   },
   "title": "1 Nuestro Territorio es Nuestra Vida",
   "content": [
