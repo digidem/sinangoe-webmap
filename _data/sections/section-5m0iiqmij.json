@@ -1,0 +1,85 @@
+{
+  "pitch": 0,
+  "bearing": 0,
+  "id": "section-5M0IiqMIJ",
+  "title": "8: Cacería y respeto por la selva",
+  "title_en": "8",
+  "layerOpacity": [
+    {
+      "value": "background",
+      "label": "background"
+    },
+    {
+      "value": "pesca y caceria copy",
+      "label": "pesca y caceria copy"
+    },
+    {
+      "value": "saladero copy",
+      "label": "saladero copy"
+    },
+    {
+      "value": "sitio de pesca copy",
+      "label": "sitio de pesca copy"
+    },
+    {
+      "value": "osoanteojos copy",
+      "label": "osoanteojos copy"
+    },
+    {
+      "value": "huangana copy",
+      "label": "huangana copy"
+    },
+    {
+      "value": "hormigas copy",
+      "label": "hormigas copy"
+    },
+    {
+      "value": "gallo-de-pena copy",
+      "label": "gallo-de-pena copy"
+    },
+    {
+      "value": "boa copy",
+      "label": "boa copy"
+    },
+    {
+      "value": "ave copy",
+      "label": "ave copy"
+    },
+    {
+      "value": "armadillo copy",
+      "label": "armadillo copy"
+    },
+    {
+      "value": "animal copy",
+      "label": "animal copy"
+    },
+    {
+      "value": "animal-extinccion copy",
+      "label": "animal-extinccion copy"
+    },
+    {
+      "value": "bfrizzelle-major-rivers-4tu0hm copy 4",
+      "label": "bfrizzelle-major-rivers-4tu0hm copy 4"
+    },
+    {
+      "value": "small rivers copy 2",
+      "label": "small rivers copy 2"
+    },
+    {
+      "value": "small rivers copy 3",
+      "label": "small rivers copy 3"
+    },
+    {
+      "value": "small rivers copy 4",
+      "label": "small rivers copy 4"
+    }
+  ],
+  "sw": {
+    "lon": -77.489,
+    "lat": 0.0503
+  },
+  "ne": {
+    "lon": -77.405,
+    "lat": 0.1056
+  }
+}
