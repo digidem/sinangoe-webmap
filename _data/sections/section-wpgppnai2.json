@@ -2,20 +2,52 @@
   "pitch": 0,
   "bearing": 0,
   "id": "section-wpGpPNAI2",
-  "title": "Nuevo ",
+  "title": "7:  Ríos y quebradas: las venas dando vida al territorio ",
   "layerOpacity": [
     {
       "value": "background",
       "label": "background"
+    },
+    {
+      "value": "bfrizzelle-major-rivers-4tu0hm copy 5",
+      "label": "bfrizzelle-major-rivers-4tu0hm copy 5"
+    },
+    {
+      "value": "small rivers copy 5",
+      "label": "small rivers copy 5"
+    },
+    {
+      "value": "small rivers copy 6",
+      "label": "small rivers copy 6"
+    },
+    {
+      "value": "small rivers copy 7",
+      "label": "small rivers copy 7"
+    },
+    {
+      "value": "pescar copy 1",
+      "label": "pescar copy 1"
+    },
+    {
+      "value": "pesca y caceria copy 1",
+      "label": "pesca y caceria copy 1"
+    },
+    {
+      "value": "canyon copy 1",
+      "label": "canyon copy 1"
+    },
+    {
+      "value": "cascadas copy 1",
+      "label": "cascadas copy 1"
     }
   ],
   "sw": {
-    "lon": 1,
-    "lat": 0
+    "lon": -77.48,
+    "lat": 0.0366
   },
   "ne": {
-    "lon": 0,
-    "lat": -2
+    "lon": -77.3825,
+    "lat": 0.1
   },
-  "title_en": "New"
+  "title_en": "7"
 }
