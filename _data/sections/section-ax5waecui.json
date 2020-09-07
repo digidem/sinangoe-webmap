@@ -21,6 +21,42 @@
     {
       "value": "background",
       "label": "background"
+    },
+    {
+      "value": "Sinangoe Area",
+      "label": "Sinangoe Area"
+    },
+    {
+      "value": "Sinangoe Village",
+      "label": "Sinangoe Village"
+    },
+    {
+      "value": "bfrizzelle-major-rivers",
+      "label": "bfrizzelle-major-rivers"
+    },
+    {
+      "value": "national-parks area",
+      "label": "national-parks area"
+    },
+    {
+      "value": "National Parks Label",
+      "label": "National Parks Label"
+    },
+    {
+      "value": "Carreteras",
+      "label": "Carreteras"
+    },
+    {
+      "value": "Carreteras outline",
+      "label": "Carreteras outline"
+    },
+    {
+      "value": "Towns",
+      "label": "Towns"
+    },
+    {
+      "value": "Town labels",
+      "label": "Town labels"
     }
   ],
   "id": "section-aX5waeCUi"
