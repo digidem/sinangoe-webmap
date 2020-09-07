@@ -1,14 +1,14 @@
 {
   "pitch": 0,
   "sw": {
-    "lon": 0,
-    "lat": 0
+    "lon": -77.63,
+    "lat": 0.02
   },
   "bearing": 0,
   "title_en": "6. ",
   "ne": {
-    "lon": 0.5,
-    "lat": 0.5
+    "lon": -77.4,
+    "lat": 0.16
   },
   "title": "6.   Somos guardianes de un refugio mega-diverso y único  ",
   "content": [
