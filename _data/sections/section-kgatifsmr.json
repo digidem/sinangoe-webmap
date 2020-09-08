@@ -44,6 +44,14 @@
     {
       "value": "Mining areas detail surround",
       "label": "Mining areas detail surround"
+    },
+    {
+      "value": "Mining areas label",
+      "label": "Mining areas label"
+    },
+    {
+      "value": "mapbox-satellite",
+      "label": "mapbox-satellite"
     }
   ],
   "sw": {
