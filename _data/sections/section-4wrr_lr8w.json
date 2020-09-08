@@ -1,0 +1,89 @@
+{
+  "pitch": 0,
+  "bearing": 0,
+  "id": "section-4WRr_Lr8W",
+  "title": "9 Farmacia, mercado y centro cultural",
+  "title_en": "9",
+  "layerOpacity": [
+    {
+      "value": "background",
+      "label": "background"
+    },
+    {
+      "value": "Sinangoe Area",
+      "label": "Sinangoe Area"
+    },
+    {
+      "value": "palmeras copy 1",
+      "label": "palmeras copy 1"
+    },
+    {
+      "value": "flora copy 1",
+      "label": "flora copy 1"
+    },
+    {
+      "value": "yoco y yage area copy 2",
+      "label": "yoco y yage area copy 2"
+    },
+    {
+      "value": "bfrizzelle-major-rivers",
+      "label": "bfrizzelle-major-rivers"
+    },
+    {
+      "value": "barbasco",
+      "label": "barbasco"
+    },
+    {
+      "value": "chonta",
+      "label": "chonta"
+    },
+    {
+      "value": "liana",
+      "label": "liana"
+    },
+    {
+      "value": "moretal",
+      "label": "moretal"
+    },
+    {
+      "value": "palmera",
+      "label": "palmera"
+    },
+    {
+      "value": "planta",
+      "label": "planta"
+    },
+    {
+      "value": "semilla-artesania",
+      "label": "semilla-artesania"
+    },
+    {
+      "value": "yage",
+      "label": "yage"
+    },
+    {
+      "value": "arbol",
+      "label": "arbol"
+    },
+    {
+      "value": "yoco",
+      "label": "yoco"
+    },
+    {
+      "value": "Artesania Chacra Palmera label",
+      "label": "Artesania Chacra Palmera label"
+    },
+    {
+      "value": "Yoco and Yage label",
+      "label": "Yoco and Yage label"
+    }
+  ],
+  "sw": {
+    "lon": -77.756,
+    "lat": 0.046
+  },
+  "ne": {
+    "lon": -77.451,
+    "lat": 0.219
+  }
+}
