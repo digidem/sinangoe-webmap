@@ -18,10 +18,6 @@
       "label": "yoco y yage area copy 2"
     },
     {
-      "value": "ancestral copy",
-      "label": "ancestral copy"
-    },
-    {
       "value": "invisibles copy",
       "label": "invisibles copy"
     },
@@ -42,26 +38,6 @@
       "label": "bfrizzelle-major-rivers"
     },
     {
-      "value": "cuento-anestral",
-      "label": "cuento-anestral"
-    },
-    {
-      "value": "entierros",
-      "label": "entierros"
-    },
-    {
-      "value": "text-new copy",
-      "label": "text-new copy"
-    },
-    {
-      "value": "casa-ancestros copy",
-      "label": "casa-ancestros copy"
-    },
-    {
-      "value": "campamento-cofan copy 2",
-      "label": "campamento-cofan copy 2"
-    },
-    {
       "value": "invisibles label",
       "label": "invisibles label"
     },
@@ -71,11 +47,11 @@
     }
   ],
   "sw": {
-    "lon": -77.75,
-    "lat": -1
+    "lon": -77.72,
+    "lat": -0.005
   },
   "ne": {
-    "lon": -77.4,
-    "lat": 0.226
+    "lon": -77.392,
+    "lat": 0.247
   }
 }
