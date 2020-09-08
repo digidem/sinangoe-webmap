@@ -1,0 +1,21 @@
+{
+  "pitch": 0,
+  "bearing": 0,
+  "id": "section-KGATiFsMR",
+  "title": "12 Concesiones mineras sin consentimiento ni consulta",
+  "title_en": "12",
+  "layerOpacity": [
+    {
+      "value": "background",
+      "label": "background"
+    }
+  ],
+  "sw": {
+    "lon": -77,
+    "lat": 0.01
+  },
+  "ne": {
+    "lon": -78,
+    "lat": 0.02
+  }
+}
