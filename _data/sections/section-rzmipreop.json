@@ -1,0 +1,217 @@
+{
+  "pitch": 0,
+  "bearing": 0,
+  "id": "section-rZMiPReoP",
+  "title": "13 Nuestra necesidad de tener nuestro título de propiedad",
+  "title_en": "13",
+  "layerOpacity": [
+    {
+      "value": "background",
+      "label": "background"
+    },
+    {
+      "value": "ne-10m-land-ai2i9o",
+      "label": "ne-10m-land-ai2i9o"
+    },
+    {
+      "value": "Sinangoe Area",
+      "label": "Sinangoe Area"
+    },
+    {
+      "value": "caceria copy 1",
+      "label": "caceria copy 1"
+    },
+    {
+      "value": "pescar copy 1",
+      "label": "pescar copy 1"
+    },
+    {
+      "value": "flora copy 1",
+      "label": "flora copy 1"
+    },
+    {
+      "value": "palmeras copy 1",
+      "label": "palmeras copy 1"
+    },
+    {
+      "value": "ancestral copy",
+      "label": "ancestral copy"
+    },
+    {
+      "value": "invisibles copy",
+      "label": "invisibles copy"
+    },
+    {
+      "value": "yoco y yage area copy 2",
+      "label": "yoco y yage area copy 2"
+    },
+    {
+      "value": "small rivers copy 17",
+      "label": "small rivers copy 17"
+    },
+    {
+      "value": "small rivers copy 18",
+      "label": "small rivers copy 18"
+    },
+    {
+      "value": "small rivers copy 19",
+      "label": "small rivers copy 19"
+    },
+    {
+      "value": "bfrizzelle-major-rivers",
+      "label": "bfrizzelle-major-rivers"
+    },
+    {
+      "value": "Sinangoe Village",
+      "label": "Sinangoe Village"
+    },
+    {
+      "value": "Sinangoe label dark copy",
+      "label": "Sinangoe label dark copy"
+    },
+    {
+      "value": "canyon",
+      "label": "canyon"
+    },
+    {
+      "value": "cascadas",
+      "label": "cascadas"
+    },
+    {
+      "value": "playa",
+      "label": "playa"
+    },
+    {
+      "value": "yage",
+      "label": "yage"
+    },
+    {
+      "value": "yoco",
+      "label": "yoco"
+    },
+    {
+      "value": "semilla-artesania",
+      "label": "semilla-artesania"
+    },
+    {
+      "value": "barbasco",
+      "label": "barbasco"
+    },
+    {
+      "value": "chonta",
+      "label": "chonta"
+    },
+    {
+      "value": "liana",
+      "label": "liana"
+    },
+    {
+      "value": "moretal",
+      "label": "moretal"
+    },
+    {
+      "value": "palmera",
+      "label": "palmera"
+    },
+    {
+      "value": "planta",
+      "label": "planta"
+    },
+    {
+      "value": "arbol",
+      "label": "arbol"
+    },
+    {
+      "value": "saladero",
+      "label": "saladero"
+    },
+    {
+      "value": "sitio de pesca",
+      "label": "sitio de pesca"
+    },
+    {
+      "value": "osoanteojos",
+      "label": "osoanteojos"
+    },
+    {
+      "value": "huangana",
+      "label": "huangana"
+    },
+    {
+      "value": "hormigas",
+      "label": "hormigas"
+    },
+    {
+      "value": "gallo-de-pena",
+      "label": "gallo-de-pena"
+    },
+    {
+      "value": "boa",
+      "label": "boa"
+    },
+    {
+      "value": "ave",
+      "label": "ave"
+    },
+    {
+      "value": "armadillo",
+      "label": "armadillo"
+    },
+    {
+      "value": "animal",
+      "label": "animal"
+    },
+    {
+      "value": "animal-extinccion",
+      "label": "animal-extinccion"
+    },
+    {
+      "value": "cueva",
+      "label": "cueva"
+    },
+    {
+      "value": "cerros-mirador",
+      "label": "cerros-mirador"
+    },
+    {
+      "value": "cuento-anestral",
+      "label": "cuento-anestral"
+    },
+    {
+      "value": "campamento-cofan",
+      "label": "campamento-cofan"
+    },
+    {
+      "value": "chacra",
+      "label": "chacra"
+    },
+    {
+      "value": "casa-ancestros",
+      "label": "casa-ancestros"
+    },
+    {
+      "value": "casas",
+      "label": "casas"
+    },
+    {
+      "value": "entierros",
+      "label": "entierros"
+    },
+    {
+      "value": "area-invisibles",
+      "label": "area-invisibles"
+    },
+    {
+      "value": "Todos puntos copy 1",
+      "label": "Todos puntos copy 1"
+    }
+  ],
+  "sw": {
+    "lon": -77.824,
+    "lat": -0.0202
+  },
+  "ne": {
+    "lon": -77.386,
+    "lat": 0.2486
+  }
+}
