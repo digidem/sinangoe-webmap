@@ -1,8 +1,22 @@
 {
   "pitch": 0,
+  "sw": {
+    "lon": -77.48,
+    "lat": 0.0366
+  },
   "bearing": 0,
-  "id": "section-wpGpPNAI2",
+  "title_en": "7",
+  "ne": {
+    "lon": -77.3825,
+    "lat": 0.1
+  },
   "title": "7  Ríos y quebradas: las venas dando vida al territorio ",
+  "content": [
+    {
+      "type": "text",
+      "es": "La relación íntima que tenemos con nuestro territorio ancestral nace de nuestra dependencia del agua, los ríos y la pesca. Las cabeceras de los ríos amazónicos son lugares claves para la reproducción de los peces. El pescado es nuestra principal fuente de proteína. Tomando en cuenta las épocas del año y los tamaños de los ríos y quebradas, los Cofanes hemos desarrollado varias técnicas de pesca que no interfieren con la reproducción, desove, y desarrollo de las especies nativas. Así aseguramos nuestra pervivencia a largo plazo."
+    }
+  ],
   "layerOpacity": [
     {
       "value": "background",
@@ -41,13 +55,5 @@
       "label": "cascadas copy 1"
     }
   ],
-  "sw": {
-    "lon": -77.48,
-    "lat": 0.0366
-  },
-  "ne": {
-    "lon": -77.3825,
-    "lat": 0.1
-  },
-  "title_en": "7"
+  "id": "section-wpGpPNAI2"
 }
