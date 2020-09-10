@@ -1,9 +1,22 @@
 {
   "pitch": 0,
+  "sw": {
+    "lon": -77.745,
+    "lat": 0.057
+  },
   "bearing": 0,
-  "id": "section-KGATiFsMR",
-  "title": "12 Concesiones mineras sin consentimiento ni consulta",
   "title_en": "12",
+  "ne": {
+    "lon": -77.397,
+    "lat": 0.255
+  },
+  "title": "12 Concesiones mineras sin consentimiento ni consulta",
+  "content": [
+    {
+      "type": "text",
+      "es": "Durante un recorrido en enero 2018, nuestra guardia observó maquinarias pesadas excavando en las orillas del Río Aguarico. Fue así que nuestra comunidad aprendió que el gobierno ecuatoriano había otorgado sin consultarnos 20 concesiones mineras y estaba en proceso para entregar 32 más en la cabecera del Río Aguarico, y fundamentalmente sobre las riberas de los ríos Aguarico, Cofanes y Chingual; lo cual afectaba directamente y muy gravemente nuestra forma de vida, historia y nuestro territorio.\\\n\\\nDespués de que varias denuncias a las autoridades en contra a esas operaciones no pudieron frenar esa nueva amenaza, nuestra comunidad inició un juicio en contra de cuatro ministerios y agencias del estado. En octubre de 2018, los jueces provinciales nos dieron definitivamente la razón y ordenaron la anulación de las 52 concesiones mineras; reconociendo la violación de nuestros derechos y el grave riesgo para la superviviencia de nuestra comunidad que esta minería suponía.Una victoria histórica para nuestra comunidad y para todos los pueblos indígenas del Ecuador."
+    }
+  ],
   "layerOpacity": [
     {
       "value": "background",
@@ -54,12 +67,5 @@
       "label": "mapbox-satellite"
     }
   ],
-  "sw": {
-    "lon": -77.745,
-    "lat": 0.057
-  },
-  "ne": {
-    "lon": -77.397,
-    "lat": 0.255
-  }
+  "id": "section-KGATiFsMR"
 }
