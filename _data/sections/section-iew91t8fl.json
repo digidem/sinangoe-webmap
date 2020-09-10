@@ -1,9 +1,22 @@
 {
   "pitch": 0,
+  "sw": {
+    "lon": -77.72,
+    "lat": -0.005
+  },
   "bearing": 0,
-  "id": "section-IEW91T8Fl",
-  "title": "10 Selva sagrada y espiritualidad: el dominio de la gente invisible",
   "title_en": "10",
+  "ne": {
+    "lon": -77.392,
+    "lat": 0.247
+  },
+  "title": "10 Selva sagrada y espiritualidad: el dominio de la gente invisible",
+  "content": [
+    {
+      "type": "text",
+      "es": "En nuestra cultura Cofán, grandes espacios del territorio ancestral están dedicados a los espíritus, zonas sagradas para los que llamamos “la gente invisible”. Por respeto a nuestros ancestros y a la fuerza de los espíritus, ninguna persona puede entrar a esas zonas, donde se considera que los familiares fallecidos viven en paz. Son zonas intangibles, y entrar ahí significaría ofender a nuestros ancestros, nuestros espíritus y nuestra identidad como A’ Cofan. Sin embargo, la colonización y la deforestación han reducido drásticamente la selva de nuestra gente invisible, y los últimos refugios son de alta importancia para nosotros.\\\n\\\nLa toma del yagé, una planta sagrada y nativa de nuestro territorio, es el puente al mundo espiritual Cofán. Durante ceremonias, se toma yagé para analizar eventos pasados y guiar decisiones futuras como individuos y como comunidad. La conexión muy cercana entre el bosque y los Cofanes se expresa también diariamente con la toma de yocó, un bejuco sagrado usado por milenarios como bebida estimulante con alto contenido de cafeína."
+    }
+  ],
   "layerOpacity": [
     {
       "value": "background",
@@ -50,12 +63,5 @@
       "label": "Sinangoe Village copy"
     }
   ],
-  "sw": {
-    "lon": -77.72,
-    "lat": -0.005
-  },
-  "ne": {
-    "lon": -77.392,
-    "lat": 0.247
-  }
+  "id": "section-IEW91T8Fl"
 }
