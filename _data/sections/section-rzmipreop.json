@@ -1,9 +1,22 @@
 {
   "pitch": 0,
+  "sw": {
+    "lon": -77.824,
+    "lat": -0.0202
+  },
   "bearing": 0,
-  "id": "section-rZMiPReoP",
-  "title": "13 Nuestra necesidad de tener nuestro título de propiedad",
   "title_en": "13",
+  "ne": {
+    "lon": -77.386,
+    "lat": 0.2486
+  },
+  "title": "13 Nuestra necesidad de tener nuestro título de propiedad",
+  "content": [
+    {
+      "type": "text",
+      "es": "Con la creación sin consultarnos del Parque Nacional Cayambe-Coca sobre nuestro territorio ancestral de Sinangoe en 1971 y el otorgamiento inconsulto de concesiones mineras en 2018, el gobierno ha demostrado en varias ocasiones su incapacidad y falta de voluntad de proteger y respetar nuestro territorio y nuestros derechos ancestrales como Cofanes. Aunque somos un pueblo milenario, el Ministerio del Ambiente (MAE) actualmente sólo reconoce alrededor del 20% de nuestro territorio ancestral, y ello dentro dentro de un convenio de co-manejo que tenemos con el Estado, que en nada se parece al reconocimiento de nuestros derechos como propietarios ancestrales, tal como establece la Constitución ecuatoriana. Sinangoe aún no tiene un título de propiedad sobre las 62000 hectáreas que son nuestro territorio ancestral."
+    }
+  ],
   "layerOpacity": [
     {
       "value": "background",
@@ -206,12 +219,5 @@
       "label": "Todos puntos copy 1"
     }
   ],
-  "sw": {
-    "lon": -77.824,
-    "lat": -0.0202
-  },
-  "ne": {
-    "lon": -77.386,
-    "lat": 0.2486
-  }
+  "id": "section-rZMiPReoP"
 }
