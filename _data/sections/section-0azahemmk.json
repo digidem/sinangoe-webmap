@@ -23,10 +23,6 @@
       "label": "background"
     },
     {
-      "value": "mapbox-satellite",
-      "label": "mapbox-satellite"
-    },
-    {
       "value": "bfrizzelle-major-rivers-4tu0hm copy 4",
       "label": "bfrizzelle-major-rivers-4tu0hm copy 4"
     },
@@ -77,6 +73,10 @@
     {
       "value": "huangana copy",
       "label": "huangana copy"
+    },
+    {
+      "value": "ne-10m-land-ai2i9o",
+      "label": "ne-10m-land-ai2i9o"
     }
   ],
   "id": "section-0AZahEmMK"
