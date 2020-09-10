@@ -1,9 +1,22 @@
 {
   "pitch": 0,
+  "sw": {
+    "lon": -77.489,
+    "lat": 0.0503
+  },
   "bearing": 0,
-  "id": "section-5M0IiqMIJ",
-  "title": "8 Cacería y respeto por la selva",
   "title_en": "8",
+  "ne": {
+    "lon": -77.405,
+    "lat": 0.1056
+  },
+  "title": "8 Cacería y respeto por la selva",
+  "content": [
+    {
+      "type": "text",
+      "es": "text text text"
+    }
+  ],
   "layerOpacity": [
     {
       "value": "background",
@@ -74,12 +87,5 @@
       "label": "small rivers copy 4"
     }
   ],
-  "sw": {
-    "lon": -77.489,
-    "lat": 0.0503
-  },
-  "ne": {
-    "lon": -77.405,
-    "lat": 0.1056
-  }
+  "id": "section-5M0IiqMIJ"
 }
