@@ -1,9 +1,22 @@
 {
   "pitch": 0,
+  "sw": {
+    "lon": -77.756,
+    "lat": 0.046
+  },
   "bearing": 0,
-  "id": "section-4WRr_Lr8W",
-  "title": "9 Farmacia, mercado y centro cultural",
   "title_en": "9",
+  "ne": {
+    "lon": -77.451,
+    "lat": 0.219
+  },
+  "title": "9 Farmacia, mercado y centro cultural",
+  "content": [
+    {
+      "type": "text",
+      "es": "El territorio es parte integral de nuestra identidad y pervivencia Cofán. En nuestro bosque se encuentran nuestras medicinas, nuestra alimentación y nuestras herramientas para expresar nuestra cultura y manera de vivir como Cofán. El conocimiento profundo que tenemos en la utilización de plantas medicinales nos permite curar varias enfermedades, heridas, y malestar psicológico. El territorio también ofrece todo lo necesario para nuestras artesanías, la construcción de nuestras canoas, casas y lanzas simbólicas de nuestra guardia."
+    }
+  ],
   "layerOpacity": [
     {
       "value": "background",
@@ -90,12 +103,5 @@
       "label": "small rivers copy 19"
     }
   ],
-  "sw": {
-    "lon": -77.756,
-    "lat": 0.046
-  },
-  "ne": {
-    "lon": -77.451,
-    "lat": 0.219
-  }
+  "id": "section-4WRr_Lr8W"
 }
