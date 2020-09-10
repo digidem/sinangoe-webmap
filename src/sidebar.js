@@ -275,6 +275,7 @@ module.exports = function (lang, _map) {
         es: section.title,
         en: section.title_en
       })}</h1>`, onenter, onexit)
+      if (!section.content) return ''
       var contents = section.content.map((item) => {
         switch (item.type) {
           case 'video':
