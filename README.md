@@ -20,6 +20,7 @@ For deploying
 
 ```
 npm run build
+http-server dist
 ```
 
 
