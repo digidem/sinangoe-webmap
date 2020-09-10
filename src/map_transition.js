@@ -111,6 +111,7 @@ function mapTransition (viewId, map, fitBoundsOptions) {
   function fadeinLayers () {
     // Fadein layers in target view
     Object.keys(view.layers).forEach(function (layerId) {
+      if (!view.layers.hasOwnProperty(layerId) || !map.getLayer(layerId)) return console.error('no layer', layerId)
       debug(viewId + ': fadein', layerId)
       setLayerOpacity(map, layerId, view.layers[layerId], FADEIN_DURATION)
     })
