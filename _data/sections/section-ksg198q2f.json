@@ -1,9 +1,22 @@
 {
   "pitch": 0,
+  "sw": {
+    "lon": -77.65,
+    "lat": 0.042
+  },
   "bearing": 0,
-  "id": "section-ksG198Q2f",
-  "title": "11 Convivencia milenaria con nuestro territorio",
   "title_en": "11",
+  "ne": {
+    "lon": -77.384,
+    "lat": 2
+  },
+  "title": "11 Convivencia milenaria con nuestro territorio",
+  "content": [
+    {
+      "type": "text",
+      "es": "Los Cofanes de Sinangoe no siempre hemos vivido en la ubicación actual de la comunidad dentro de nuestro territorio. En varias ubicaciones del mismo, se encuentran evidencias de asentamientos ancestrales, pedazos de nuestras ollas tradicionales de barro, presencia de palmas típicas usadas para la construcción de casas, y sembríos de plátano y yuca antiguamente plantados por nuestros ancestros. Los ancianos tenían un uso extensivo de los ríos para la pesca y eran hábiles cazadores, usaban caminos ancestrales que hasta el día de hoy siguen utilizados por nuestra gente."
+    }
+  ],
   "layerOpacity": [
     {
       "value": "background",
@@ -62,12 +75,5 @@
       "label": "campamento-cofan copy 2"
     }
   ],
-  "sw": {
-    "lon": -77.65,
-    "lat": 0.042
-  },
-  "ne": {
-    "lon": -77.384,
-    "lat": 2
-  }
+  "id": "section-ksG198Q2f"
 }
