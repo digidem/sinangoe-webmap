@@ -1,9 +1,22 @@
 {
   "pitch": 0,
+  "sw": {
+    "lon": -77.48,
+    "lat": 0.099
+  },
   "bearing": 0,
-  "id": "section-RMdpdqNkE",
-  "title": "14 La resistencia sigue",
   "title_en": "14",
+  "ne": {
+    "lon": -77.417,
+    "lat": 0.138
+  },
+  "title": "14 La resistencia sigue",
+  "content": [
+    {
+      "type": "text",
+      "es": "Con el reconocimiento de nuestros derechos y territorio por parte de los jueces ecuatorianos frente al actuar del gobierno nacional, el conocimiento profundo de nuestro territorio, grandes apoyos al nivel nacional e internacional y una determinación sin falla para seguir defendiendo al territorio, nuestra guardia de Sinangoe sirve como ejemplo e inspiración para otros pueblos originarios en luchas similares. Mientras tanto, nuestra guardia seguirá vigilando en sus recorridos semanales. Que viva Sinangoe!"
+    }
+  ],
   "layerOpacity": [
     {
       "value": "background",
@@ -34,12 +47,5 @@
       "label": "small rivers copy 19"
     }
   ],
-  "sw": {
-    "lon": -77.48,
-    "lat": 0.099
-  },
-  "ne": {
-    "lon": -77.417,
-    "lat": 0.138
-  }
+  "id": "section-RMdpdqNkE"
 }
