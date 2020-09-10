@@ -62,7 +62,7 @@ function mapTransition (viewId, map, fitBoundsOptions) {
 
   function showOverlays () {
     Object.keys(view.layers).forEach(function (layerId) {
-      if (!map.getLayer(layerId)) return debug('no layer', layerId)
+      if (!map.getLayer(layerId)) return console.warn('no layer', layerId)
       var currentVisibility = map.getLayoutProperty(layerId, 'visibility')
       var targetVisibility = view.layers[layerId]
       if (currentVisibility === 'none' && targetVisibility > 0) {
