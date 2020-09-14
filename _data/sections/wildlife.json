@@ -90,6 +90,10 @@
     {
       "value": "Ancestral Terr Label line",
       "label": "Ancestral Terr Label line"
+    },
+    {
+      "value": "Mining areas detail surround",
+      "label": "Mining areas detail surround"
     }
   ],
   "id": "wildlife"
