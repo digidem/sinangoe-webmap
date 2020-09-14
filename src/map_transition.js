@@ -62,12 +62,13 @@ function mapTransition (viewId, map, fitBoundsOptions) {
 
   function showOverlays () {
     Object.keys(view.layers).forEach(function (layerId) {
-      if (!view.layers.hasOwnProperty(layerId) || !map.getLayer(layerId)) return console.error('no layer', layerId)
+      if (!view.layers.hasOwnProperty(layerId) || !map.getLayer(layerId)) return console.error('Could not make layer visible', layerId)
       try {
         var currentVisibility = map.getLayoutProperty(layerId, 'visibility')
         var targetVisibility = view.layers[layerId]
         if (currentVisibility === 'none' && targetVisibility > 0) {
           setLayerOpacity(map, layerId, 0, 0)
+          console.log('Making layer visible', layerId)
           map.setLayoutProperty(layerId, 'visibility', 'visible')
         }
       } catch (err) {
@@ -95,7 +96,7 @@ function mapTransition (viewId, map, fitBoundsOptions) {
   function fadeoutLayers () {
     // Fadeout layers that we need to hide during transitions for perf
     hiddenLayersExpanded.forEach(function (layerId) {
-      if (!map.getLayer(layerId)) return console.error('no layer', layerId)
+      if (!map.getLayer(layerId)) return console.error('Could not fade out layer', layerId)
       setLayerOpacity(map, layerId, 0, FADEOUT_DURATION)
     })
 
@@ -111,7 +112,7 @@ function mapTransition (viewId, map, fitBoundsOptions) {
   function fadeinLayers () {
     // Fadein layers in target view
     Object.keys(view.layers).forEach(function (layerId) {
-      if (!view.layers.hasOwnProperty(layerId) || !map.getLayer(layerId)) return console.error('no layer', layerId)
+      if (!view.layers.hasOwnProperty(layerId) || !map.getLayer(layerId)) return console.error('Could not fade in layer', layerId)
       debug(viewId + ': fadein', layerId)
       setLayerOpacity(map, layerId, view.layers[layerId], FADEIN_DURATION)
     })
@@ -130,7 +131,7 @@ function mapTransition (viewId, map, fitBoundsOptions) {
 
   function hideOverlays () {
     hiddenLayersExpanded.forEach(function (layerId) {
-      if (!map.getLayer(layerId)) return console.error('no layer', layerId)
+      if (!map.getLayer(layerId)) return console.error('Could not hide layer', layerId)
       map.setLayoutProperty(layerId, 'visibility', 'none')
     })
   }
@@ -147,7 +148,7 @@ function mapTransition (viewId, map, fitBoundsOptions) {
 function setLayerOpacity (map, layerId, visible, duration) {
   if (typeof duration === 'undefined') duration = FADEIN_DURATION
   var layer = map.getLayer(layerId)
-  if (!layer) return console.error('no layer', layerId)
+  if (!layer) return console.error('Could not set layer opacity to ' + visible + ' because layer could not be found with id', layerId)
   var props = getOpacityPropNames(layer)
   props.forEach(function (name) {
     var opacity = visible
