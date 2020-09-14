@@ -206,6 +206,10 @@
     {
       "value": "cerros con nombre area",
       "label": "cerros con nombre area"
+    },
+    {
+      "value": "background",
+      "label": "background"
     }
   ],
   "id": "puff"
