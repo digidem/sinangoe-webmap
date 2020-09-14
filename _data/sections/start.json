@@ -21,16 +21,8 @@
   ],
   "layerOpacity": [
     {
-      "value": "Frontera internacional",
-      "label": "Frontera internacional"
-    },
-    {
       "value": "background",
       "label": "background"
-    },
-    {
-      "value": "Kofan Territory Label dark",
-      "label": "Kofan Territory Label dark"
     },
     {
       "value": "Sinangoe label dark",
@@ -51,6 +43,22 @@
     {
       "value": "Kofan Ancestral Territory",
       "label": "Kofan Ancestral Territory"
+    },
+    {
+      "value": "Fronteras Internationales dark",
+      "label": "Fronteras Internationales dark"
+    },
+    {
+      "value": "country-label essential",
+      "label": "country-label essential"
+    },
+    {
+      "value": "Kofan Ancestral Territory Limite",
+      "label": "Kofan Ancestral Territory Limite"
+    },
+    {
+      "value": "Ancestral Territory Label",
+      "label": "Ancestral Territory Label"
     }
   ],
   "id": "start"
