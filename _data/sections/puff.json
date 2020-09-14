@@ -1,14 +1,14 @@
 {
   "pitch": 0,
   "sw": {
-    "lat": 0.0964,
-    "lon": -77.545
+    "lat": 0.0729,
+    "lon": -77.5053
   },
   "bearing": 0,
   "title_en": "Section 1",
   "ne": {
-    "lat": 0.173,
-    "lon": -77.42
+    "lat": 0.1356,
+    "lon": -77.379
   },
   "title": "1 Nuestro Territorio es Nuestra Vida",
   "content": [
@@ -22,14 +22,6 @@
     {
       "value": "ne-10m-land-ai2i9o",
       "label": "ne-10m-land-ai2i9o"
-    },
-    {
-      "value": "background",
-      "label": "background"
-    },
-    {
-      "value": "area-invisibles",
-      "label": "area-invisibles"
     },
     {
       "value": "entierros",
@@ -164,24 +156,16 @@
       "label": "Sinangoe Village"
     },
     {
-      "value": "Sinangoe label dark",
-      "label": "Sinangoe label dark"
-    },
-    {
       "value": "Sinangoe Area",
       "label": "Sinangoe Area"
-    },
-    {
-      "value": "Small Rivers",
-      "label": "Small Rivers"
     },
     {
       "value": "bfrizzelle-major-rivers",
       "label": "bfrizzelle-major-rivers"
     },
     {
-      "value": "deforestation",
-      "label": "deforestation"
+      "value": "small rivers copy 19",
+      "label": "small rivers copy 19"
     }
   ],
   "id": "puff"
