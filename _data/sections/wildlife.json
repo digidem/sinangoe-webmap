@@ -68,16 +68,20 @@
       "label": "Town labels"
     },
     {
-      "value": "Ancestral Territory Label",
-      "label": "Ancestral Territory Label"
-    },
-    {
       "value": "Cofan Community Labels",
       "label": "Cofan Community Labels"
     },
     {
-      "value": "Sinangoe label dark copy",
-      "label": "Sinangoe label dark copy"
+      "value": "Sinangoe Area",
+      "label": "Sinangoe Area"
+    },
+    {
+      "value": "Pipelines",
+      "label": "Pipelines"
+    },
+    {
+      "value": "Cofan communities",
+      "label": "Cofan communities"
     }
   ],
   "id": "wildlife"
