@@ -1,14 +1,14 @@
 {
   "pitch": 0,
   "sw": {
-    "lon": -77.756,
-    "lat": 0.046
+    "lon": -77.8241,
+    "lat": 0.0272
   },
   "bearing": 0,
   "title_en": "9",
   "ne": {
-    "lon": -77.451,
-    "lat": 0.219
+    "lon": -77.3811,
+    "lat": 0.2453
   },
   "title": "9 Farmacia, mercado y centro cultural",
   "content": [
@@ -105,6 +105,14 @@
     {
       "value": "ne-10m-land-ai2i9o",
       "label": "ne-10m-land-ai2i9o"
+    },
+    {
+      "value": "flora area",
+      "label": "flora area"
+    },
+    {
+      "value": "palmeras area",
+      "label": "palmeras area"
     }
   ],
   "id": "section-4WRr_Lr8W"
