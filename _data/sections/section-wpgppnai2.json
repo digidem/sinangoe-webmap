@@ -23,10 +23,6 @@
       "label": "background"
     },
     {
-      "value": "bfrizzelle-major-rivers-4tu0hm copy 5",
-      "label": "bfrizzelle-major-rivers-4tu0hm copy 5"
-    },
-    {
       "value": "small rivers copy 5",
       "label": "small rivers copy 5"
     },
@@ -47,16 +43,32 @@
       "label": "pescar area"
     },
     {
-      "value": "pesca",
-      "label": "pesca"
-    },
-    {
       "value": "canyon",
       "label": "canyon"
     },
     {
       "value": "cascadas",
       "label": "cascadas"
+    },
+    {
+      "value": "bfrizzelle-major-rivers",
+      "label": "bfrizzelle-major-rivers"
+    },
+    {
+      "value": "Sinangoe Area",
+      "label": "Sinangoe Area"
+    },
+    {
+      "value": "playa",
+      "label": "playa"
+    },
+    {
+      "value": "sitio de pesca",
+      "label": "sitio de pesca"
+    },
+    {
+      "value": "pesca label",
+      "label": "pesca label"
     }
   ],
   "id": "section-wpGpPNAI2"
