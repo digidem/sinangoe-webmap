@@ -39,24 +39,24 @@
       "label": "small rivers copy 7"
     },
     {
-      "value": "pescar copy 1",
-      "label": "pescar copy 1"
-    },
-    {
-      "value": "pesca y caceria copy 1",
-      "label": "pesca y caceria copy 1"
-    },
-    {
-      "value": "canyon copy 1",
-      "label": "canyon copy 1"
-    },
-    {
-      "value": "cascadas copy 1",
-      "label": "cascadas copy 1"
-    },
-    {
       "value": "ne-10m-land-ai2i9o",
       "label": "ne-10m-land-ai2i9o"
+    },
+    {
+      "value": "pescar area",
+      "label": "pescar area"
+    },
+    {
+      "value": "pesca",
+      "label": "pesca"
+    },
+    {
+      "value": "canyon",
+      "label": "canyon"
+    },
+    {
+      "value": "cascadas",
+      "label": "cascadas"
     }
   ],
   "id": "section-wpGpPNAI2"
