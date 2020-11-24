@@ -39,10 +39,6 @@
       "label": "ne-10m-land-ai2i9o"
     },
     {
-      "value": "pescar area",
-      "label": "pescar area"
-    },
-    {
       "value": "canyon",
       "label": "canyon"
     },
@@ -69,6 +65,10 @@
     {
       "value": "pesca label",
       "label": "pesca label"
+    },
+    {
+      "value": "pescar area pattern",
+      "label": "pescar area pattern"
     }
   ],
   "id": "section-wpGpPNAI2"
