@@ -46,7 +46,7 @@
     "lozad": "^1.4.0",
     "mapbox-gl": "^1.10.0",
     "mapbox-gl-toggle-control": "^1.0.5",
-    "marked": "^1.0.0",
+    "marked": "^4.0.10",
     "nanocomponent": "^6.5.2",
     "nanohtml": "^1.2.4",
     "nanomorph": "^5.1.3",
